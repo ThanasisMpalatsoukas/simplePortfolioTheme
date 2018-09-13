@@ -1,0 +1,448 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-11 17:10+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#. Name of the template
+msgid "side image"
+msgstr ""
+
+#. Name of the template
+msgid "Gallery"
+msgstr ""
+
+#: footer.php:15
+msgid "Contact information"
+msgstr ""
+
+#: footer.php:41
+msgid "useful links"
+msgstr ""
+
+#: footer.php:53
+msgid "portfolio"
+msgstr ""
+
+#: footer.php:73
+msgid "blog"
+msgstr ""
+
+#: footer.php:96
+msgid "testimonials"
+msgstr ""
+
+#: footer.php:109
+msgid "about me"
+msgstr ""
+
+#: footer.php:173
+msgid "Developed and designed by"
+msgstr ""
+
+#: footer.php:173
+msgid "all rights reserved"
+msgstr ""
+
+#: front-page.php:24
+msgid "Loading"
+msgstr ""
+
+#: front-page.php:47 front-page.php:303
+msgid "ABOUT ME"
+msgstr ""
+
+#: front-page.php:55 front-page.php:332
+msgid "TESTIMONIALS"
+msgstr ""
+
+#: front-page.php:65 front-page.php:400
+msgid "PORTFOLIO"
+msgstr ""
+
+#: front-page.php:75
+msgid "BLOG"
+msgstr ""
+
+#: front-page.php:81
+msgid "CONTACT ME"
+msgstr ""
+
+#: front-page.php:279
+msgid "Click below to see more"
+msgstr ""
+
+#: front-page.php:295
+msgid "OBJECTIVES"
+msgstr ""
+
+#: front-page.php:369
+msgid ""
+"PLEASE MAKE A POST IN THE TESTIMONIALS TO MAKE IT SHOW UP HERE OR DEACTIVATE "
+"THE TESTIMONIALS OPTION"
+msgstr ""
+
+#: front-page.php:405
+msgid "All"
+msgstr ""
+
+#: front-page.php:456
+msgid "LAST"
+msgstr ""
+
+#: front-page.php:471
+msgid "NEXT"
+msgstr ""
+
+#: front-page.php:480
+msgid ""
+"PLEASE POST A PORTFOLIO POST HERE OR DEACTIVE THE PORTFOLIO SECTION TOTALLY"
+msgstr ""
+
+#: front-page.php:502
+msgid "VISIT MY BLOG"
+msgstr ""
+
+#: front-page.php:503
+msgid "Get informed by the latest news of web development"
+msgstr ""
+
+#: front-page.php:521
+msgid "READ MORE"
+msgstr ""
+
+#: front-page.php:535
+msgid " PLEASE DEACITVATE THE BLOG SECTION OR INSERT POSTS TO IT "
+msgstr ""
+
+#: front-page.php:556
+msgid "YOU CAN CONTACT ME RIGHT HERE"
+msgstr ""
+
+#: front-page.php:557
+msgid "Dont be afraid to say hi"
+msgstr ""
+
+#: front-page.php:560
+msgid "Contact me"
+msgstr ""
+
+#: index.php:26
+msgid "Home"
+msgstr ""
+
+#: index.php:38
+msgid "My personal blog"
+msgstr ""
+
+#: index.php:39
+msgid ""
+"Our everyday thoughts are presented here Case studies, video presentations "
+"and photo-shootings below."
+msgstr ""
+
+#: sidebar-services.php:17
+msgid "SERVICES"
+msgstr ""
+
+#: sidebar-services.php:18
+msgid "best services around the town"
+msgstr ""
+
+#: sidebar-skillbar.php:17
+msgid "SKILLS"
+msgstr ""
+
+#: sidebar-skillbar.php:18
+msgid "my expertises"
+msgstr ""
+
+#: single-portfolio.php:29
+msgid "BACK"
+msgstr ""
+
+#: single-portfolio.php:42
+msgid "Details"
+msgstr ""
+
+#: inc/cpt.php:59
+msgid "Enter the name of the person here and his words below"
+msgstr ""
+
+#: inc/cpt.php:63
+msgid "Enter the jobs title here and the description below"
+msgstr ""
+
+#: inc/cpt.php:83
+msgid "Header"
+msgstr ""
+
+#: inc/cpt.php:95
+msgid "Choose the details"
+msgstr ""
+
+#: inc/cpt.php:185
+msgid "This is disabled for this template"
+msgstr ""
+
+#: inc/cpt.php:189
+msgid "background image: big images are preffered ( 1800px min )"
+msgstr ""
+
+#. Widget name will appear in UI.
+#: inc/custom-service-widget.php:56 inc/custom-service-widget.php:59
+msgid "Service widget"
+msgstr ""
+
+#: inc/custom-service-widget.php:97 inc/custom-widget.php:97
+msgid "Hello, World!"
+msgstr ""
+
+#: inc/custom-service-widget.php:120 inc/custom-widget.php:120
+msgid "New title"
+msgstr ""
+
+#: inc/custom-service-widget.php:134 inc/custom-widget.php:134
+msgid "Title:"
+msgstr ""
+
+#: inc/custom-service-widget.php:136
+msgid "Description:"
+msgstr ""
+
+#. Widget name will appear in UI.
+#: inc/custom-widget.php:55
+msgid "Skillbar widget"
+msgstr ""
+
+#: inc/custom-widget.php:58
+msgid "Skill bar widget"
+msgstr ""
+
+#: inc/custom-widget.php:136
+msgid "Percentage:"
+msgstr ""
+
+#: inc/function-admin.php:27
+msgid "General"
+msgstr ""
+
+#: inc/function-admin.php:29
+msgid "Support"
+msgstr ""
+
+#: inc/function-admin.php:31
+msgid "Content"
+msgstr ""
+
+#: inc/function-admin.php:100
+msgid "Full name"
+msgstr ""
+
+#: inc/function-admin.php:101
+msgid "Email adress"
+msgstr ""
+
+#: inc/function-admin.php:102
+msgid "Adress"
+msgstr ""
+
+#: inc/function-admin.php:103
+msgid "State"
+msgstr ""
+
+#: inc/function-admin.php:104
+msgid "Country"
+msgstr ""
+
+#: inc/function-admin.php:105 inc/function-admin.php:110
+msgid "Phone number"
+msgstr ""
+
+#: inc/function-admin.php:106
+msgid "Do you have facebook?"
+msgstr ""
+
+#: inc/function-admin.php:107
+msgid "Do you have instagram?"
+msgstr ""
+
+#: inc/function-admin.php:108
+msgid "Do you have linkedin?"
+msgstr ""
+
+#: inc/function-admin.php:109
+msgid "Do you have twitter?"
+msgstr ""
+
+#: inc/function-admin.php:111
+msgid "brief intro of what you do"
+msgstr ""
+
+#: inc/function-admin.php:112
+msgid "Keyboard on animation on main text"
+msgstr ""
+
+#: inc/function-admin.php:113
+msgid "Milli seconds per letter"
+msgstr ""
+
+#: inc/function-admin.php:114
+msgid "Porfile picture"
+msgstr ""
+
+#: inc/function-admin.php:141
+msgid "Your logo"
+msgstr ""
+
+#: inc/function-admin.php:142
+msgid "Enable/disable loading screen"
+msgstr ""
+
+#: inc/function-admin.php:143
+msgid "Enable/disable blog"
+msgstr ""
+
+#: inc/function-admin.php:144
+msgid "Enable/disable the portfolio"
+msgstr ""
+
+#: inc/function-admin.php:145
+msgid "Enable/disable testimonials"
+msgstr ""
+
+#: inc/function-admin.php:146
+msgid "about yourself"
+msgstr ""
+
+#: inc/function-admin.php:147
+msgid "Your objectives"
+msgstr ""
+
+#: inc/function-admin.php:148
+msgid "Testimonials background image"
+msgstr ""
+
+#: inc/function-admin.php:149
+msgid "main background image"
+msgstr ""
+
+#: inc/function-admin.php:150
+msgid "blog background image"
+msgstr ""
+
+#: inc/function-admin.php:396
+msgid "200ms is the default value"
+msgstr ""
+
+#: inc/function-admin.php:410
+msgid "Enable or disable keyboard animation"
+msgstr ""
+
+#: inc/function-admin.php:421
+msgid "This is the general options menu"
+msgstr ""
+
+#: inc/function-admin.php:432
+msgid "This is the genera support menu"
+msgstr ""
+
+#: inc/function-admin.php:637
+msgid "Enable or disable blog function"
+msgstr ""
+
+#: inc/function-admin.php:652
+msgid "Enable or disable portfolio function"
+msgstr ""
+
+#: inc/function-admin.php:743
+msgid "Enable or disable testimonials function"
+msgstr ""
+
+#: inc/theme-support.php:92
+msgid "Blog sidebar"
+msgstr ""
+
+#: inc/theme-support.php:94
+msgid "Widgets in this area will be shown on all posts in the blog area."
+msgstr ""
+
+#: inc/theme-support.php:102
+msgid "Contact form"
+msgstr ""
+
+#: inc/theme-support.php:104
+msgid "This is where you will copy the shortcode for the contact form."
+msgstr ""
+
+#: inc/theme-support.php:112
+msgid "Skillbar section"
+msgstr ""
+
+#: inc/theme-support.php:114
+msgid "Insert the skillbar of the theme here."
+msgstr ""
+
+#: inc/theme-support.php:122
+msgid "Services section"
+msgstr ""
+
+#: inc/theme-support.php:124
+msgid "Insert the services here."
+msgstr ""
+
+#: templateparts/content-audio.php:17 templateparts/content-gallery.php:17
+#: templateparts/content-image.php:17 templateparts/content-video.php:17
+#: templateparts/content.php:17
+msgid "Click here to see more"
+msgstr ""
+
+#: inc/templates/theme-support-templates/metabox-choices.php:20
+msgid "Choose the name of the detail"
+msgstr ""
+
+#: inc/templates/theme-support-templates/metabox-choices.php:22
+msgid "Choose the value of the detail"
+msgstr ""
+
+#: inc/templates/theme-support-templates/metabox-choices.php:24
+msgid "Romove detail"
+msgstr ""
+
+#: inc/templates/theme-support-templates/metabox-choices.php:32
+msgid "Submit"
+msgstr ""
+
+#. Name of the theme
+msgid "simplePortfolio"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"PortfolioTheme is a theme for people who need a simple, good looking "
+"portfolio theme to showcase their work. The theme includes a portfolio "
+"section, a blog section , a testimonials section , a contact me section and "
+"much more."
+msgstr ""
+
+#. URI of the theme
+msgid "https://sakisbal.com/"
+msgstr ""
+
+#. Author of the theme
+msgid "Sakis Bal"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://www.facebook.com/sakis.mpalatsoukas.5"
+msgstr ""

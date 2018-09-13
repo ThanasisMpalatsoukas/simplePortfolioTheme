@@ -1,0 +1,299 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: simplePortfolio\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-11 17:06+0000\n"
+"PO-Revision-Date: 2018-09-11 17:06+0000\n"
+"Last-Translator: admin <crazyguyplaying13@gmail.com>\n"
+"Language-Team: Ελληνικά\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#. Name of the template
+msgid "side image"
+msgstr "Στηλη φωτογραφιων"
+
+#. Name of the template
+msgid "Gallery"
+msgstr "γκαλερι"
+
+#: footer.php:15
+msgid "Contact information"
+msgstr "Πληροφοριες Επικοινωνίας"
+
+#: footer.php:41
+msgid "useful links"
+msgstr "Χρησιμοι συνδεσμοι"
+
+#: footer.php:53
+msgid "portfolio"
+msgstr "πορτφολιο"
+
+#: footer.php:73
+msgid "blog"
+msgstr "blog"
+
+#: footer.php:96
+msgid "testimonials"
+msgstr "Γνωμες πελατων"
+
+#: footer.php:109
+msgid "about me"
+msgstr "σχετικα με εμενα"
+
+#: footer.php:173
+msgid "Developed and designed by"
+msgstr "Δημιουργημενο και σχεδιασμενο απο"
+
+#: footer.php:173
+msgid "all rights reserved"
+msgstr "Ολα τα δικαιωματα διατηρουνται"
+
+#: front-page.php:24
+msgid "Loading"
+msgstr "Φορτωνει"
+
+#: front-page.php:47 front-page.php:303
+msgid "ABOUT ME"
+msgstr "ΣΧΕΤΙΚΑ ΜΕ ΕΜΕΝΑ"
+
+#: front-page.php:55 front-page.php:332
+msgid "TESTIMONIALS"
+msgstr "ΓΝΩΜΕΣ ΠΕΛΑΤΩΝ"
+
+#: front-page.php:65 front-page.php:400
+msgid "PORTFOLIO"
+msgstr "ΠΟΡΤΦΟΛΙΟ"
+
+#: front-page.php:75
+msgid "BLOG"
+msgstr "BLOG"
+
+#: front-page.php:81
+msgid "CONTACT ME"
+msgstr "ΕΠΙΚΟΙΝΩΝΗΣΕ ΜΑΖΙ ΜΟΥ"
+
+#: front-page.php:279
+msgid "Click below to see more"
+msgstr "Πατηστε κατω για να δειτε περισσοτερα"
+
+#: front-page.php:295
+msgid "OBJECTIVES"
+msgstr "ΣΤΟΧΟΙ"
+
+#: front-page.php:369
+msgid ""
+"PLEASE MAKE A POST IN THE TESTIMONIALS TO MAKE IT SHOW UP HERE OR DEACTIVATE "
+"THE TESTIMONIALS OPTION"
+msgstr ""
+"ΠΑΡΑΚΑΛΩ ΒΑΛΕΤΕ ΠΕΡΙΕΧΟΜΕΝΟ ΣΤΙΣ ΓΝΩΜΕΣ ΤΩΝ ΠΕΛΑΤΩΝ ΣΑΣ Η ΑΠΕΝΕΡΓΟΠΟΙΗΣΤΕ ΤΟ"
+
+#: front-page.php:405
+msgid "All"
+msgstr "Ολα"
+
+#: front-page.php:456
+msgid "LAST"
+msgstr "ΠΡΟΗΓΟΥΜΕΝΟ"
+
+#: front-page.php:471
+msgid "NEXT"
+msgstr "ΕΠΟΜΕΝΟ"
+
+#: front-page.php:480
+msgid ""
+"PLEASE POST A PORTFOLIO POST HERE OR DEACTIVE THE PORTFOLIO SECTION TOTALLY"
+msgstr "ΠΑΡΑΚΑΛΩ ΒΑΛΕΤΕ ΠΕΡΙΕΧΟΜΕΝΟ ΣΟ ΠΟΡΤΦΟΛΙΟ ΣΑΣ Η ΑΠΕΝΕΡΓΟΠΟΙΗΣΤΕ ΤΟ"
+
+#: front-page.php:502
+msgid "VISIT MY BLOG"
+msgstr "ΕΠΙΣΚΕΦΤΕΙΤΕ ΤΟ BLOG ΜΟΥ"
+
+#: front-page.php:503
+msgid "Get informed by the latest news of web development"
+msgstr "Ενημερωθειτε για τα νεα της αναπτυξης διαδυκτιου"
+
+#: front-page.php:521
+msgid "READ MORE"
+msgstr "ΠΕΡΙΣΣΟΤΕΡΑ"
+
+#: front-page.php:535
+msgid " PLEASE DEACITVATE THE BLOG SECTION OR INSERT POSTS TO IT "
+msgstr "ΠΑΡΑΚΑΛΩ ΑΠΕΝΕΡΓΟΠΟΙΗΣΤΕ ΤΟ ΜΠΛΟΓΚ Η ΔΩΣΤΕ ΤΟΥ ΠΕΡΙΕΧΟΜΕΝΟ "
+
+#: front-page.php:556
+msgid "YOU CAN CONTACT ME RIGHT HERE"
+msgstr "ΜΠΟΡΕΙΤΕ ΝΑ ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜAZI MOY ΕΔΩ"
+
+#: front-page.php:557
+msgid "Dont be afraid to say hi"
+msgstr "μη φοβασαι να πεις ενα γεια"
+
+#: front-page.php:560
+msgid "Contact me"
+msgstr "επικοινώνησε μαζί μου"
+
+#: index.php:26
+msgid "Home"
+msgstr "Αρχικη"
+
+#: index.php:38
+msgid "My personal blog"
+msgstr "Το προσωπικο μου blog"
+
+#: index.php:39
+msgid ""
+"Our everyday thoughts are presented here Case studies, video presentations "
+"and photo-shootings below."
+msgstr "Οι καθημερινοι μας στοχοι παρουσιαζονται εδω."
+
+#: sidebar-services.php:17
+msgid "SERVICES"
+msgstr "ΥΠΗΡΕΣΙΕΣ"
+
+#: sidebar-services.php:18
+msgid "best services around the town"
+msgstr "Οι καλυτερες υπηρεσιες στη πολη"
+
+#: sidebar-skillbar.php:17
+msgid "SKILLS"
+msgstr "ΙΚΑΝΟΤΗΤΕΣ"
+
+#: sidebar-skillbar.php:18
+msgid "my expertises"
+msgstr "Οι δεξιοτητες μου"
+
+#: single-portfolio.php:29
+msgid "BACK"
+msgstr "ΠΙΣΩ"
+
+#: single-portfolio.php:42
+msgid "Details"
+msgstr "Λεπτομεριες"
+
+#: inc/cpt.php:59
+msgid "Enter the name of the person here and his words below"
+msgstr "Εισαγετε εδω το ονομα του ατομου και την γνωμη του για σας παρακατω"
+
+#: inc/cpt.php:63
+msgid "Enter the jobs title here and the description below"
+msgstr ""
+"Εισαγετε εδω τον τιτλο της δουλεια και την περιγραφη της δουλεια απο κατω"
+
+#: inc/cpt.php:83
+msgid "Header"
+msgstr "επικεφαλιδα"
+
+#: inc/cpt.php:95
+msgid "Choose the details"
+msgstr "Διαλεξτε τις λεπτομεριες"
+
+#: inc/cpt.php:185
+msgid "This is disabled for this template"
+msgstr "Αυτο ειναι απενεργοποιημενο γιαυτο το τμημα"
+
+#: inc/cpt.php:189
+msgid "background image: big images are preffered ( 1800px min )"
+msgstr "Εικονες μεγαλων διαστασεων προτεινονται εδω (1800px το ελαχιστο)"
+
+#. Widget name will appear in UI.
+#: inc/custom-service-widget.php:56 inc/custom-service-widget.php:59
+msgid "Service widget"
+msgstr "Υπηρεσιες widget"
+
+#: inc/custom-service-widget.php:97 inc/custom-widget.php:97
+msgid "Hello, World!"
+msgstr "Γεια σου, κοσμε!"
+
+#: inc/custom-service-widget.php:120 inc/custom-widget.php:120
+msgid "New title"
+msgstr "Νεος τιτλος"
+
+#: inc/custom-service-widget.php:134 inc/custom-widget.php:134
+msgid "Title:"
+msgstr "Τιτλος:"
+
+#: inc/custom-service-widget.php:136
+msgid "Description:"
+msgstr "Περιγραφη"
+
+#. Widget name will appear in UI.
+#: inc/custom-widget.php:55
+msgid "Skillbar widget"
+msgstr "Widget μπαρας ικανοτητων"
+
+#: inc/custom-widget.php:58
+msgid "Skill bar widget"
+msgstr "Widget μπαρας ικανοτητων"
+
+#: inc/custom-widget.php:136
+msgid "Percentage:"
+msgstr "Ποσοστο"
+
+#: inc/theme-support.php:92
+msgid "Blog sidebar"
+msgstr "Blog sidebar"
+
+#: inc/theme-support.php:94
+msgid "Widgets in this area will be shown on all posts in the blog area."
+msgstr "Τα widget σε αυτην την μερια θα φενονται στο περιεχομενο του blog"
+
+#: inc/theme-support.php:102
+msgid "Contact form"
+msgstr "Φόρμα Επικοινωνίας"
+
+#: inc/theme-support.php:104
+msgid "This is where you will copy the shortcode for the contact form."
+msgstr "Εδω ειναι το μερος στο οποιο βαζεις τον κωδικο απτο contact form."
+
+#: inc/theme-support.php:112
+msgid "Skillbar section"
+msgstr "Τμημα μπαρας ικανοτητων"
+
+#: inc/theme-support.php:114
+msgid "Insert the skillbar of the theme here."
+msgstr "Εισαγετε την μπαρα ικανοτητας του θεματος σας εδω"
+
+#: inc/theme-support.php:122
+msgid "Services section"
+msgstr "Τμημα υπηρεσιων"
+
+#: inc/theme-support.php:124
+msgid "Insert the services here."
+msgstr "Εισαγετε την υπηρεσια εδω"
+
+#: templateparts/content-audio.php:17 templateparts/content-gallery.php:17
+#: templateparts/content-image.php:17 templateparts/content-video.php:17
+#: templateparts/content.php:17
+msgid "Click here to see more"
+msgstr "Πατηστε εδω για να δειτε περισσοτερα"
+
+#. Name of the theme
+msgid "simplePortfolio"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"PortfolioTheme is a theme for people who need a simple, good looking "
+"portfolio theme to showcase their work. The theme includes a portfolio "
+"section, a blog section , a testimonials section , a contact me section and "
+"much more."
+msgstr ""
+"PortfolioTheme ειναι ενα θεμα για ανθρωπος που χριαζονται ενα απλο, λιτο "
+"ομορφο πορτφολιο για να επιδειξουν την δουλεια τους."
+
+#. URI of the theme
+msgid "https://sakisbal.com/"
+msgstr ""
+
+#. Author of the theme
+msgid "Sakis Bal"
+msgstr "Θανασης μπαλατσουκας"
+
+#. Author URI of the theme
+msgid "https://www.facebook.com/sakis.mpalatsoukas.5"
+msgstr ""
