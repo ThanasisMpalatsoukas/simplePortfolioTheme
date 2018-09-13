@@ -30,7 +30,7 @@ To start using this theme all you need to do is:
 
 1. Download this theme.
 2. Put it inside the theme folder.
-3. Download the plugin on the following url: Downlaod this [this plugin](https://github.com/ThanasisMpalatsoukas/SimplePortfolioPlugin.git) and put it in the plugin directory.
+3. Download the plugin on the following url: Get this [plugin](https://github.com/ThanasisMpalatsoukas/SimplePortfolioPlugin.git) and put it in the plugin directory.
 4. Activate the plugin.
 5. Go to settings -> permalinks and set the permalinks to plain.
 6. Go to settings -> readings and set the "Your homepage displays" settings to static pages.
