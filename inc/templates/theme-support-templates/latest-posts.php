@@ -23,6 +23,6 @@
 
 <?php
   endwhile;
-  endif;
+  endif;  
 
 ?>
