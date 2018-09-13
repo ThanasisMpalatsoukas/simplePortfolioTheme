@@ -6,7 +6,7 @@
  *  @package perfectPortfolio
  **/
 
-?>
+?> 
 <footer role="contentinfo">
 	<div class="information-container">
 		<div class="row">
