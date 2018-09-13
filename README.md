@@ -19,7 +19,7 @@ The theme has the following features:
  To start using this theme all you need to do is:
 
  1. Download this theme.
- 2. Download the plugin on the following url: https://github.com/ThanasisMpalatsou and put it in the plugin directory.
+ 2. Download the plugin on the following url: https://github.com/ThanasisMpalatsoukas/SimplePortfolioPlugin.git and put it in the plugin directory.
  3. Activate the plugin.
  4. Go to settings -> permalinks and set the permalinks to plain.
  5. Go to settings -> readings and set the "Your homepage displays" settings to static pages.
