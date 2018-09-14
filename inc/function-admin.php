@@ -130,6 +130,8 @@ function portfolioTheme_custom_settings() {
   register_setting( 'portfolio_content' , 'content_logo' );
 	register_setting( 'portfolio_content' , 'content_contact' );
   register_setting( 'portfolio_content' , 'content_loading' );
+	register_setting( 'portfolio_content' , 'content_front_page_template' );
+	register_setting( 'portfolio_content' , 'content_portfolio_template' );
   register_setting( 'portfolio_content' , 'content_testimonials' );
   register_setting( 'portfolio_content' , 'content_portfolio' );
   register_setting( 'portfolio_content' , 'content_main_page_bg' );
@@ -145,6 +147,8 @@ function portfolioTheme_custom_settings() {
   add_settings_field( 'content_blog_field' , esc_html( __( 'Enable/disable blog' , 'simplePortfolio' ) ) , 'portfolioTheme_content_blog' , 'portfolio_theme_content' , 'portfolioTheme-general-content' );
   add_settings_field( 'content_portfolio_field' , esc_html( __( 'Enable/disable the portfolio' , 'simplePortfolio' ) ) , 'portfolioTheme_content_portfolio' , 'portfolio_theme_content' , 'portfolioTheme-general-content' );
   add_settings_field( 'content_testimonials_field' , esc_html( __( 'Enable/disable testimonials' , 'simplePortfolio' ) ) , 'portfolioTheme_content_testimonials' , 'portfolio_theme_content' , 'portfolioTheme-general-content' );
+	add_settings_field( 'content_front_page_template_field' , esc_html( __( 'choose the front page template' , 'simplePortfolio' ) ) , 'portfolioTheme_content_front_page_callback' , 'portfolio_theme_content' , 'portfolioTheme-general-content' );
+	add_settings_field( 'content_portfolio_template_field' , esc_html( __( 'choose the front portfolio template' , 'simplePortfolio' ) ) , 'portfolioTheme_content_portfolio_callback' , 'portfolio_theme_content' , 'portfolioTheme-general-content' );
   add_settings_field( 'content_aboutme_field' , esc_html( __( 'about yourself' , 'simplePortfolio' ) ) , 'portfolioTheme_content_aboutme' , 'portfolio_theme_content' , 'portfolioTheme-general-content' );
   add_settings_field( 'content_objecitves_field' , esc_html( __( 'Your objectives' , 'simplePortfolio' ) ) , 'portfolioTheme_content_objectives' , 'portfolio_theme_content' , 'portfolioTheme-general-content' );
   add_settings_field( 'content_testimonials_bg_field' , esc_html( __( 'Testimonials background image' , 'simplePortfolio' ) ) , 'portfolioTheme_content_testimonials_bg' , 'portfolio_theme_content' , 'portfolioTheme-general-content' );
@@ -367,6 +371,65 @@ function portfolioTheme_general_adress() {
  **/
 function portfolioTheme_general_content() {
   echo 'Here you can enable and disable certain options for the content of the theme';
+}
+
+
+/**
+ * Summary
+ *
+ * Callback function to create choises for the front-page template .
+ *
+ * @since 1.3.5
+ **/
+function portfolioTheme_content_front_page_callback() {
+	$option = get_option( 'content_front_page_template' );
+
+	if ( ! isset( $option ) ):
+		$option = 'default';
+	endif;
+
+	$selection = array( 'default' , 'info-on-image' , 'no-logo' );
+
+	echo '<select name="content_front_page_template" id="content_front_page_template">';
+
+	foreach ( $selection as $select ):
+		if( $select == $option ):
+			echo '<option value="' . $select . '" selected>' . esc_html( $select ) . '</option>';
+		else:
+			echo '<option value="' . $select . '" >' . esc_html( $select ) . '</option>';
+		endif;
+	endforeach;
+
+	echo '</select>';
+}
+
+/**
+ * Summary
+ *
+ * Callback function to create choiices for the portfolio template .
+ *
+ * @since 1.3.5
+ **/
+function portfolioTheme_content_portfolio_callback() {
+	$option = get_option( 'content_portfolio_template' );
+
+	if ( ! isset( $option ) ):
+		$option = 'default';
+	endif;
+
+	$selection = array( 'default' , 'column-2' , 'column-3' , 'column-4' );
+
+	echo '<select name="content_portfolio_template" id="content_portfolio_template">';
+
+	foreach ( $selection as $select ):
+		if( $select == $option ):
+			echo '<option value="' . $select . '" selected>' . esc_html( $select ) . '</option>';
+		else:
+			echo '<option value="' . $select . '" >' . esc_html( $select ) . '</option>';
+		endif;
+	endforeach;
+
+	echo '</select>';
 }
 
 /**

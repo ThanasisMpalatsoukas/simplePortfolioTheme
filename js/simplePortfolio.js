@@ -272,7 +272,7 @@ jQuery(document).ready(function($){
       });
     });
 
-    $('body').on('mouseenter','.masonry',
+    $('body').on('mouseenter','.portfolio-container-single',
       function(){
         $(this).find('div').each(function(i,obj){
           if($(obj).hasClass('inner-icon')){
@@ -288,7 +288,7 @@ jQuery(document).ready(function($){
         });
       });
 
-    $('body').on('click tap','.masonry',function(){
+    $('body').on('click tap','.portfolio-container-single',function(){
       var href = $(this).find('input').val();
 
       var category;
@@ -300,7 +300,7 @@ jQuery(document).ready(function($){
         window.location = href+'&category='+category;
     });
 
-    $('body').on('mouseleave','.masonry',
+    $('body').on('mouseleave','.portfolio-container-single',
       function(){
         $(this).find('div').each(function(i,obj){
           if($(obj).hasClass('inner-icon')){

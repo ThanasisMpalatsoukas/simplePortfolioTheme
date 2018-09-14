@@ -57,7 +57,8 @@ General
   background-position: center; }
 
 body {
-  font-family: 'Work Sans',sans-serif; }
+  font-family: 'Work Sans',sans-serif;
+  overflow-x: hidden; }
 
 .wp-caption {
   display: none; }
@@ -171,6 +172,9 @@ FrontPage
         opacity: 1;
         transition: 0.6s; }
 
+.front-page-container {
+  overflow: hidden; }
+
 .front-page-top {
   height: 35px;
   background-color: #eff3f4; }
@@ -212,7 +216,7 @@ FrontPage
     border-right: 1px solid rgba(30, 30, 30, 0.3); }
     .front-page-upper-header .logo-outter-container .logo-container {
       height: auto;
-      width: 80%;
+      width: 100%;
       margin: 0 auto;
       border: 1px solid rgba(0, 0, 0, 0); }
       .front-page-upper-header .logo-outter-container .logo-container .logo {
@@ -257,7 +261,8 @@ FrontPage
 .header-photo {
   height: 100vh;
   display: flex;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  overflow: hidden; }
   .header-photo h1 {
     position: absolute;
     margin-left: auto;
@@ -285,6 +290,30 @@ FrontPage
         width: 290px;
         border-radius: 50%;
         margin: 5px; }
+  .header-photo .info-on-image {
+    position: absolute; }
+    .header-photo .info-on-image .email-png {
+      width: 23px;
+      height: 23px;
+      float: left; }
+    .header-photo .info-on-image .phone-container {
+      margin-top: 30px; }
+      .header-photo .info-on-image .phone-container p {
+        float: left;
+        color: #fff;
+        margin-left: 10px; }
+        .header-photo .info-on-image .phone-container p span {
+          margin-left: 10px;
+          font-style: italic; }
+    .header-photo .info-on-image .email-container {
+      margin-top: 30px; }
+      .header-photo .info-on-image .email-container p {
+        float: left;
+        color: #fff;
+        margin-left: 10px; }
+        .header-photo .info-on-image .email-container p span {
+          margin-left: 50px;
+          font-style: italic; }
   .header-photo .triangle {
     height: 50px;
     width: 50px;
@@ -627,6 +656,93 @@ FrontPage
 .portfolio .portfolio-container {
   margin-top: 10vh;
   margin-bottom: 5vh; }
+  .portfolio .portfolio-container .column-2-container {
+    height: 500px; }
+    .portfolio .portfolio-container .column-2-container .column-2 {
+      height: 500px; }
+      .portfolio .portfolio-container .column-2-container .column-2 .upper-photo {
+        height: 460px; }
+        .portfolio .portfolio-container .column-2-container .column-2 .upper-photo .inner-icon {
+          width: 100%;
+          height: 460px;
+          background-color: rgba(0, 0, 0, 0.6);
+          cursor: pointer;
+          display: flex;
+          justify-content: center; }
+          .portfolio .portfolio-container .column-2-container .column-2 .upper-photo .inner-icon .eyes {
+            height: 50px;
+            width: 50px;
+            align-self: center; }
+          .portfolio .portfolio-container .column-2-container .column-2 .upper-photo .inner-icon h4 {
+            position: absolute;
+            color: #fff;
+            font-weight: 700;
+            margin-top: 45%;
+            font-size: 1em; }
+          .portfolio .portfolio-container .column-2-container .column-2 .upper-photo .inner-icon p {
+            position: absolute;
+            color: #fff;
+            font-weight: 400;
+            margin-top: 50%;
+            font-size: 0.7em; }
+  .portfolio .portfolio-container .column-3-container {
+    height: 400px; }
+    .portfolio .portfolio-container .column-3-container .column-3 {
+      height: 400px; }
+      .portfolio .portfolio-container .column-3-container .column-3 .upper-photo {
+        height: 360px; }
+        .portfolio .portfolio-container .column-3-container .column-3 .upper-photo .inner-icon {
+          width: 100%;
+          height: 360px;
+          background-color: rgba(0, 0, 0, 0.6);
+          cursor: pointer;
+          display: flex;
+          justify-content: center; }
+          .portfolio .portfolio-container .column-3-container .column-3 .upper-photo .inner-icon .eyes {
+            height: 50px;
+            width: 50px;
+            align-self: center; }
+          .portfolio .portfolio-container .column-3-container .column-3 .upper-photo .inner-icon h4 {
+            position: absolute;
+            color: #fff;
+            font-weight: 700;
+            margin-top: 45%;
+            font-size: 1em; }
+          .portfolio .portfolio-container .column-3-container .column-3 .upper-photo .inner-icon p {
+            position: absolute;
+            color: #fff;
+            font-weight: 400;
+            margin-top: 50%;
+            font-size: 0.7em; }
+  .portfolio .portfolio-container .column-4-container {
+    height: 300px; }
+    .portfolio .portfolio-container .column-4-container .column-4 {
+      height: 300px; }
+      .portfolio .portfolio-container .column-4-container .column-4 .upper-photo {
+        height: 260px; }
+        .portfolio .portfolio-container .column-4-container .column-4 .upper-photo .inner-icon {
+          width: 100%;
+          height: 260px;
+          background-color: rgba(0, 0, 0, 0.6);
+          cursor: pointer;
+          display: flex;
+          justify-content: center; }
+          .portfolio .portfolio-container .column-4-container .column-4 .upper-photo .inner-icon .eyes {
+            height: 50px;
+            width: 50px;
+            align-self: center; }
+          .portfolio .portfolio-container .column-4-container .column-4 .upper-photo .inner-icon h4 {
+            position: absolute;
+            color: #fff;
+            font-weight: 700;
+            margin-top: 45%;
+            font-size: 1em; }
+          .portfolio .portfolio-container .column-4-container .column-4 .upper-photo .inner-icon p {
+            position: absolute;
+            color: #fff;
+            font-weight: 400;
+            margin-top: 50%;
+            font-size: 0.7em; }
 .portfolio #portfolio {
   color: #212529; }
 .portfolio h2 {
@@ -2130,6 +2246,93 @@ Optimization for responsive design front-page
             padding-right: 30px;
             padding-top: 10px; }
 
+  .portfolio .portfolio-container .column-2-container {
+    height: 300px; }
+    .portfolio .portfolio-container .column-2-container .column-2 {
+      height: 300px; }
+      .portfolio .portfolio-container .column-2-container .column-2 .upper-photo {
+        height: 260px; }
+        .portfolio .portfolio-container .column-2-container .column-2 .upper-photo .inner-icon {
+          width: 100%;
+          height: 260px;
+          background-color: rgba(0, 0, 0, 0.6);
+          cursor: pointer;
+          display: flex;
+          justify-content: center; }
+          .portfolio .portfolio-container .column-2-container .column-2 .upper-photo .inner-icon .eyes {
+            height: 50px;
+            width: 50px;
+            align-self: center; }
+          .portfolio .portfolio-container .column-2-container .column-2 .upper-photo .inner-icon h4 {
+            position: absolute;
+            color: #fff;
+            font-weight: 700;
+            margin-top: 60%;
+            font-size: 1em; }
+          .portfolio .portfolio-container .column-2-container .column-2 .upper-photo .inner-icon p {
+            position: absolute;
+            color: #fff;
+            font-weight: 400;
+            margin-top: 70%;
+            font-size: 0.7em; }
+  .portfolio .portfolio-container .column-3-container {
+    height: 300px; }
+    .portfolio .portfolio-container .column-3-container .column-3 {
+      height: 300px; }
+      .portfolio .portfolio-container .column-3-container .column-3 .upper-photo {
+        height: 260px; }
+        .portfolio .portfolio-container .column-3-container .column-3 .upper-photo .inner-icon {
+          width: 100%;
+          height: 260px;
+          background-color: rgba(0, 0, 0, 0.6);
+          cursor: pointer;
+          display: flex;
+          justify-content: center; }
+          .portfolio .portfolio-container .column-3-container .column-3 .upper-photo .inner-icon .eyes {
+            height: 50px;
+            width: 50px;
+            align-self: center; }
+          .portfolio .portfolio-container .column-3-container .column-3 .upper-photo .inner-icon h4 {
+            position: absolute;
+            color: #fff;
+            font-weight: 700;
+            margin-top: 60%;
+            font-size: 1em; }
+          .portfolio .portfolio-container .column-3-container .column-3 .upper-photo .inner-icon p {
+            position: absolute;
+            color: #fff;
+            font-weight: 400;
+            margin-top: 70%;
+            font-size: 0.7em; }
+  .portfolio .portfolio-container .column-4-container {
+    height: 300px; }
+    .portfolio .portfolio-container .column-4-container .column-4 {
+      height: 300px; }
+      .portfolio .portfolio-container .column-4-container .column-4 .upper-photo {
+        height: 260px; }
+        .portfolio .portfolio-container .column-4-container .column-4 .upper-photo .inner-icon {
+          width: 100%;
+          height: 260px;
+          background-color: rgba(0, 0, 0, 0.6);
+          cursor: pointer;
+          display: flex;
+          justify-content: center; }
+          .portfolio .portfolio-container .column-4-container .column-4 .upper-photo .inner-icon .eyes {
+            height: 50px;
+            width: 50px;
+            align-self: center; }
+          .portfolio .portfolio-container .column-4-container .column-4 .upper-photo .inner-icon h4 {
+            position: absolute;
+            color: #fff;
+            font-weight: 700;
+            margin-top: 60%;
+            font-size: 1em; }
+          .portfolio .portfolio-container .column-4-container .column-4 .upper-photo .inner-icon p {
+            position: absolute;
+            color: #fff;
+            font-weight: 400;
+            margin-top: 70%;
+            font-size: 0.7em; }
   .portfolio h2 {
     font-size: 2em; }
   .portfolio .single-post {
@@ -2296,6 +2499,93 @@ Optimization for responsive design front-page
             opacity: 1;
             transition: 0.6s; }
 
+  .portfolio .portfolio-container .column-2-container {
+    height: 300px; }
+    .portfolio .portfolio-container .column-2-container .column-2 {
+      height: 300px; }
+      .portfolio .portfolio-container .column-2-container .column-2 .upper-photo {
+        height: 260px; }
+        .portfolio .portfolio-container .column-2-container .column-2 .upper-photo .inner-icon {
+          width: 100%;
+          height: 260px;
+          background-color: rgba(0, 0, 0, 0.6);
+          cursor: pointer;
+          display: flex;
+          justify-content: center; }
+          .portfolio .portfolio-container .column-2-container .column-2 .upper-photo .inner-icon .eyes {
+            height: 50px;
+            width: 50px;
+            align-self: center; }
+          .portfolio .portfolio-container .column-2-container .column-2 .upper-photo .inner-icon h4 {
+            position: absolute;
+            color: #fff;
+            font-weight: 700;
+            margin-top: 53%;
+            font-size: 1em; }
+          .portfolio .portfolio-container .column-2-container .column-2 .upper-photo .inner-icon p {
+            position: absolute;
+            color: #fff;
+            font-weight: 400;
+            margin-top: 63%;
+            font-size: 0.7em; }
+  .portfolio .portfolio-container .column-3-container {
+    height: 300px; }
+    .portfolio .portfolio-container .column-3-container .column-3 {
+      height: 300px; }
+      .portfolio .portfolio-container .column-3-container .column-3 .upper-photo {
+        height: 260px; }
+        .portfolio .portfolio-container .column-3-container .column-3 .upper-photo .inner-icon {
+          width: 100%;
+          height: 260px;
+          background-color: rgba(0, 0, 0, 0.6);
+          cursor: pointer;
+          display: flex;
+          justify-content: center; }
+          .portfolio .portfolio-container .column-3-container .column-3 .upper-photo .inner-icon .eyes {
+            height: 50px;
+            width: 50px;
+            align-self: center; }
+          .portfolio .portfolio-container .column-3-container .column-3 .upper-photo .inner-icon h4 {
+            position: absolute;
+            color: #fff;
+            font-weight: 700;
+            margin-top: 53%;
+            font-size: 1em; }
+          .portfolio .portfolio-container .column-3-container .column-3 .upper-photo .inner-icon p {
+            position: absolute;
+            color: #fff;
+            font-weight: 400;
+            margin-top: 63%;
+            font-size: 0.7em; }
+  .portfolio .portfolio-container .column-4-container {
+    height: 300px; }
+    .portfolio .portfolio-container .column-4-container .column-4 {
+      height: 300px; }
+      .portfolio .portfolio-container .column-4-container .column-4 .upper-photo {
+        height: 260px; }
+        .portfolio .portfolio-container .column-4-container .column-4 .upper-photo .inner-icon {
+          width: 100%;
+          height: 260px;
+          background-color: rgba(0, 0, 0, 0.6);
+          cursor: pointer;
+          display: flex;
+          justify-content: center; }
+          .portfolio .portfolio-container .column-4-container .column-4 .upper-photo .inner-icon .eyes {
+            height: 50px;
+            width: 50px;
+            align-self: center; }
+          .portfolio .portfolio-container .column-4-container .column-4 .upper-photo .inner-icon h4 {
+            position: absolute;
+            color: #fff;
+            font-weight: 700;
+            margin-top: 33%;
+            font-size: 1em; }
+          .portfolio .portfolio-container .column-4-container .column-4 .upper-photo .inner-icon p {
+            position: absolute;
+            color: #fff;
+            font-weight: 400;
+            margin-top: 43%;
+            font-size: 0.7em; }
   .portfolio h2 {
     font-size: 2em; }
   .portfolio .single-post {

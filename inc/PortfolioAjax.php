@@ -45,7 +45,7 @@ function portfolioThemePagination() {
   set_query_var( 'page' , $page );
   set_query_var( 'category' , $category );
   set_query_var( 'max' , $max );
-  get_template_part( 'inc/templates/ajax-templates/next-page' );
+  get_template_part( 'templateparts/portfolio/'  . get_option('content_portfolio_template')  );
 
   wp_die();
 }
@@ -74,7 +74,7 @@ function portfolioThemePaginationByCategory() {
   set_query_var( 'page' , 1 );
 	set_query_var( 'category' , $category );
   set_query_var( 'max' , $max );
-  get_template_part( 'inc/templates/ajax-templates/next-page' );
+  get_template_part( 'templateparts/portfolio/' . get_option('content_portfolio_template') );
 
   wp_die();
 }
