@@ -48,18 +48,18 @@ After activating the plugin created for this specific theme you should see 4 new
 
 If these have appeared you can start customizing the theme.
 
-## General options
+### General options
 
 To start customizing the theme go to appearance -> General. There are the general options of the theme. There you can
 add many things about your self to personalize the theme. The more things you add the better the theme will look. Most of the inputs
 are optional though.
 
-## Support options
+### Support options
 
 Next up is the support menu which you access via appearance -> Support. Here you can activate the post formats you are going
 to work with.
 
-## Content options
+### Content options
 
 Here are the options of customization for the actual theme. You can access this via appearance -> Content. Here you can choose
 if you want the testimonials section to be there or not. Same with the blog section or the portfolio section. If you just want the
@@ -68,7 +68,7 @@ you use in each section. Just upload some images that you can in your computer a
 In this section you can choose as well the type of presentation you want for your portfolio and your header. You can change these
 at the "Choose the front page template" and the "Choose the front portfolio template".
 
-## Portfolio posts
+### Portfolio posts
 
 To post your projects all you need to do is click on Portfolio and add new. The title will be the title of your project
 and the content will be what you have to say about your project. To customize the content and make it look better you got some options
@@ -106,7 +106,7 @@ and formated to create a gallery. The images inside the the side image template 
 
 **Featured Images are required to work properly**
 
-# Blog posts
+### Blog posts
 
 To post your thoughts all you need to do is click on Blog and add new. The title will be the title of your subject and the content will be
 what your thoughts are. To customize the content and make it look better you got some options
@@ -130,13 +130,13 @@ In the image post every image inside the content will become a masonry gallery o
 
 **Featured Images are required to work properly**
 
-# Testimonials posts
+### Testimonials posts
 
 To post thoughts that people have about you all you need to do is go to testimonials -> add new. The title here will be the name of
 the person commenting about you and the content will be his thoughts about you. The featured image will be his image, here the use
 of featured image is optional.
 
-# Messages
+### Messages
 
 All the messages that people submit will be inside this area.
 
