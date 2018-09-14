@@ -104,7 +104,7 @@ The portfolio section got 3 different templates:
 The only difference with the side image and gallery template is that any image inside the content of the gallery will be transfered
 and formated to create a gallery. The images inside the the side image template will be formated and transfered on the side of the content.
 
-**Featured Images are required to work properly**
+----**Featured Images are required to work properly**----
 
 ### Blog posts
 
@@ -128,7 +128,7 @@ In the video post you can insert a video inside the post and it will be placed o
 In the gallery post every image inside the content area will become a slider on the header.
 In the image post every image inside the content will become a masonry gallery on the header.
 
-**Featured Images are required to work properly**
+----**Featured Images are required to work properly**----
 
 ### Testimonials posts
 
@@ -140,4 +140,4 @@ of featured image is optional.
 
 All the messages that people submit will be inside this area.
 
-**HAVE FUN USING THE THEME**
+----**HAVE FUN USING THE THEME**----
