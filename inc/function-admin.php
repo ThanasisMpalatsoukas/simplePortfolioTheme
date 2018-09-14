@@ -98,7 +98,7 @@ function portfolioTheme_custom_settings() {
   add_settings_section( 'portfolioTheme-general-options' , 'General Options' , 'portfolioTheme_general_options' , 'portfolio_theme' ) ;
 
   add_settings_field( 'general_first_name' , esc_html( __( 'Full name' , 'simplePortfolio' ) ), 'portfolioTheme_general_first_name' , 'portfolio_theme' , 'portfolioTheme-general-options' ) ;
-  add_settings_field( 'generalesc_html( __mail' , esc_html( __( 'Email adress' , 'simplePortfolio' ) ) , 'portfolioTheme_generalesc_html( __mail' , 'portfolio_theme' , 'portfolioTheme-general-options' ) ;
+  add_settings_field( 'general_email' , esc_html( __( 'Email adress' , 'simplePortfolio' ) ) , 'portfolioTheme_general_email' , 'portfolio_theme' , 'portfolioTheme-general-options' ) ;
   add_settings_field( 'general_adress' , esc_html( __( 'Adress' , 'simplePortfolio' ) ) , 'portfolioTheme_general_adress' , 'portfolio_theme' , 'portfolioTheme-general-options' ) ;
   add_settings_field( 'general_state' , esc_html( __( 'State' , 'simplePortfolio' ) ) , 'portfolioTheme_general_state' , 'portfolio_theme' , 'portfolioTheme-general-options' ) ;
   add_settings_field( 'general_country' , esc_html( __( 'Country' , 'simplePortfolio' ) ) , 'portfolioTheme_general_country' , 'portfolio_theme' , 'portfolioTheme-general-options' ) ;
@@ -309,7 +309,7 @@ function portfolioTheme_general_linkedin_link() {
  *
  * @since 1.0.0
  **/
-function portfolioTheme_generalesc_html( ) {
+function portfolioTheme_general_email( ) {
   $email = esc_attr( get_option( 'email' ) );
   echo '<input type="text" name="email" value="' . esc_attr( $email ) . '"></input>';
 }

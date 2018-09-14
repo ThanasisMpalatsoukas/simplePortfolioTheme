@@ -19,7 +19,14 @@
 <?php get_header(); ?>
 
 <main role="main">
-	<?php get_template_part('templateparts/front-page/'. get_option( 'content_front_page_template' ) ); ?>
+		<?php
+		$front_page_template = get_option( 'content_front_page_template' );
+		if( isset( $front_page_template ) ):
+		    get_template_part( 'templateparts/front-page/'. $front_page_template );
+		else :
+		    get_template_part( 'templateparts/front-page/default.php' );
+		endif;
+		?>
     <div class="most-information" >
       <div class="container-fluid" id="most-information-all">
         <div class="row">
@@ -167,7 +174,14 @@
 											set_query_var('category' , 'All');
 											set_query_var('max' , $loop->max_num_pages);
 											set_query_var('page' , 1);
-											get_template_part('templateparts/portfolio/' . get_option('content_portfolio_template') );
+
+											$portfolio_template = get_option('content_portfolio_template');
+
+											if( ! isset( $portfolio_template ) ) :
+												get_template_part( 'templateparts/portfolio/default' );
+											else :
+												get_template_part( 'templateparts/portfolio/' . $portfolio_template );
+											endif;
 
 											?>
 
@@ -176,7 +190,7 @@
 			      		</div><!-- .container-fluid -->
 			    		</div><!-- .portfolio -->
 			   		</div>
-					  <?php endif; ?>
+					<?php endif; ?>
 					  <?php get_sidebar( 'skillbar' ); ?>
 					  <?php
 
