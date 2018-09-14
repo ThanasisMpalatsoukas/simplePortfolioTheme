@@ -16,6 +16,8 @@ theme, preety much everything is customizable in more details:
 - A portfolio section with 3 different templates.
 - A contact form.
 - A testimonials section.
+- Portfolio section in the front page got 4 presenation styles.
+- The front page main header got 3 presentation styles.
 - 2 extra widgets to show off your skills and your services.
 - Social links.
 
