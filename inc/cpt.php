@@ -21,7 +21,7 @@ add_action( 'admin_menu','remove_default_post_type' );
  * @since 1.0.0
  **/
 function remove_default_post_type() {
-    remove_menu_page( 'edit . php' );
+    remove_menu_page( 'edit.php' );
 }
 
 /**
@@ -38,7 +38,6 @@ function portfolioTheme_cpt() {
   add_action( 'add_meta_boxes' , 'portfolioTheme_choices_add_meta_box' );
   add_action( 'save_post' , 'portfolioTheme_save_choices' );
 	add_action(	'add_meta_boxes' , 'portfolioTheme_messages_add_meta_box');
-	add_action(	'add_meta_post' , 'portfolioTheme_save_email');
 }
 
 
@@ -82,7 +81,7 @@ add_action( 'init', 'portfolioTheme_cpt' );
  * @since 1.0.0
  **/
 function portfolioTheme_portfolio_add_meta_box() {
-  add_meta_box( 'background_image' , esc_html_e( 'Header' , 'simplePortfolio' ) , 'portfolioTheme_project_background_callback','portfolio' );
+  add_meta_box( 'background_image' , esc_html( 'Header' , 'simplePortfolio' ) , 'portfolioTheme_project_background_callback','portfolio' );
 }
 
 /**
@@ -94,7 +93,7 @@ function portfolioTheme_portfolio_add_meta_box() {
  * @since 1.0.0
  **/
 function portfolioTheme_messages_add_meta_box(){
-	add_meta_box( 'email' , esc_html_e( 'Email' , 'simplePortfolio' ) , 'portfolioTheme_email_callback','portfolio' );
+	add_meta_box( 'email' , esc_html( 'Email' , 'simplePortfolio' ) , 'portfolioTheme_email_callback','messages' );
 }
 
 /**
@@ -106,7 +105,7 @@ function portfolioTheme_messages_add_meta_box(){
  * @since 1.0.0
  **/
 function portfolioTheme_choices_add_meta_box() {
-  add_meta_box( 'portfolio_choices' , esc_html_e( 'Choose the details' , 'simplePortfolio' ) , 'portfolioTheme_project_choices_callback','portfolio' );
+  add_meta_box( 'portfolio_choices' , esc_html( 'Choose the details' , 'simplePortfolio' ) , 'portfolioTheme_project_choices_callback','portfolio' );
 }
 
 
