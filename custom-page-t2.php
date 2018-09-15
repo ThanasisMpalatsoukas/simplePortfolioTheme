@@ -116,8 +116,8 @@ while ( have_posts() ) : the_post();
 			<div class="col-lg-4 col-5">
 
 			<?php
-			$category = sanitize_text_field( wp_unslash( $_GET['category'] ) );
-			if ( isset( $category ) ) :
+			if ( isset( $_GET['category'] ) ) :
+				$category = sanitize_text_field( wp_unslash( $_GET['category'] ) );
 				get_last_link_of_portfolio( $post->ID , 'portfolio_categories', $category );
 			endif;
 			?>
@@ -129,8 +129,8 @@ while ( have_posts() ) : the_post();
 			<div class="col-lg-4 col-5">
 
 			<?php
-			$category = sanitize_text_field( wp_unslash( $_GET['category'] ) );
-			if ( isset( $category ) ) :
+			if ( isset( $_GET['category'] ) ) :
+				$category = sanitize_text_field( wp_unslash( $_GET['category'] ) );
 				get_next_link_of_portfolio( $post->ID , 'portfolio_categories', $category );
 			endif;
 			?>

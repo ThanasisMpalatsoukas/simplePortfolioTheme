@@ -62,7 +62,18 @@
     if ( isset( $content_testimonials ) && 1 == $content_testimonials ) :
 		?>
 
-    <div class="testimonials container-fluid  background-image show-up-testimonials" id="testimonials" style="background-image:url('<?php getImage( 'content_testimonials_bg' , 'testimonials.jpg' ); ?>');">
+		<?php
+		$testimonials_bg = get_option( 'content_testimonials_bg' );
+		if ( isset( $testimonials_bg	) && '' != $testimonials_bg	) :
+		?>
+    <div class="testimonials container-fluid  background-image show-up-testimonials" id="testimonials" style="background-image:url('<?php getImage( 'content_testimonials_bg' , '' ); ?>');">
+		<?php
+		else:
+		?>
+		<div class="testimonials container-fluid  background-image show-up-testimonials" id="testimonials" style="background-color:#c0392b;">
+		<?php
+		endif;
+		?>
       <div class="left-triangle background-image" style="background-image:url('<?php echo esc_attr( get_template_directory_uri() . '/img/icon.png' ); ?>');">
 
       </div><!-- .left-triangle .background-image -->
@@ -201,7 +212,19 @@
 				    $content_blog = get_option('content_blog');
 
 				    if ( isset( $content_blog ) && 1 == $content_blog ) : ?>
+
+						<?php
+						$blog_background = get_option( 'content_blog_bg_2'	);
+						if( ! isset( $blog_background ) && '' != $blog_background	) :
+						?>
 				    <div class="blog container-fluid background-image"  style="background-image:url('<?php echo esc_attr( esc_url( getImage( 'content_blog_bg_2' , '' ) ) ); ?>')">
+						<?php
+						else :
+						?>
+						<div class="blog container-fluid background-image"  style="background-color:#3498db;">
+						<?php
+						endif;
+						?>
 				      <div class="white-space container-fluid">
 
 				      </div><!-- .white-space .container-fluid -->

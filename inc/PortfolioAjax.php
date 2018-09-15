@@ -93,20 +93,17 @@ function portfolioThemePaginationByCategory() {
  **/
 function portfolioThemeSendEmail() {
 
-	if ( isset( $_POST['name'] ) &&  $_POST['name']!=''  ) :
-		$name = sanitize_text_field( wp_unslash($_POST['name']));
-	else :
-		return 1;
-	endif;
-	if ( isset( $_POST['message'] ) &&   strlen($_POST['message']) > 20 ) :
-		$message = sanitize_text_field( wp_unslash( $_POST['message'] ) );
-	else :
-		return 2;
-	endif;
-	if ( isset( $_POST['email'] ) && filter_var( $_POST['email'] , FILTER_VALIDATE_EMAIL) ) :
-		$email = sanitize_text_field( wp_unslash( $_POST['email'] ) );
-	else:
-		return 3;
+	if ( count( $_POST ) == 3	) :
+
+		if ( isset( $_POST['name'] ) ) :
+			$name = sanitize_text_field( wp_unslash($_POST['name']));
+		endif;
+		if ( isset( $_POST['message'] ) ) :
+			$message = sanitize_text_field( wp_unslash( $_POST['message'] ) );
+		endif;
+		if ( isset( $_POST['email'] ) ) :
+			$email = sanitize_text_field( wp_unslash( $_POST['email'] ) );
+		endif;
 	endif;
 
 	$post_id = wp_insert_post(

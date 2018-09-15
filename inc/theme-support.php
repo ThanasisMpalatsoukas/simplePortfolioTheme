@@ -72,9 +72,10 @@ function getImage( $image , $replacement ){
 
   if( isset( $image ) ) {
     echo esc_html($image);
+		return 0;
   }
   else{
-    echo esc_attr( get_template_directory_uri() . '/img/' . esc_attr( $replacement ) );
+    return 1;
   }
 }
 

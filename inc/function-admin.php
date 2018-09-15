@@ -394,9 +394,9 @@ function portfolioTheme_content_front_page_callback() {
 
 	foreach ( $selection as $select ):
 		if( $select == $option ):
-			echo '<option value="' . $select . '" selected>' . esc_html( $select ) . '</option>';
+			echo '<option value="' . esc_attr( $select ) . '" selected>' . esc_html( $select ) . '</option>';
 		else:
-			echo '<option value="' . $select . '" >' . esc_html( $select ) . '</option>';
+			echo '<option value="' . esc_attr( $select ) . '" >' . esc_html( $select ) . '</option>';
 		endif;
 	endforeach;
 
@@ -423,9 +423,9 @@ function portfolioTheme_content_portfolio_callback() {
 
 	foreach ( $selection as $select ):
 		if( $select == $option ):
-			echo '<option value="' . $select . '" selected>' . esc_html( $select ) . '</option>';
+			echo '<option value="' . esc_attr( $select ) . '" selected>' . esc_html( $select ) . '</option>';
 		else:
-			echo '<option value="' . $select . '" >' . esc_html( $select ) . '</option>';
+			echo '<option value="' . esc_attr( $select ) . '" >' . esc_html( $select ) . '</option>';
 		endif;
 	endforeach;
 
@@ -550,18 +550,14 @@ function portfolioTheme_general_brief() {
 function portfolioTheme_general_profile_picture() {
   $picture = esc_attr( get_option( 'profile_picture' ) );
 
-  if ( get_option( 'profile_checkbox' )!='checked' ) {
+	$cant_remove = false;
+
+  if ( get_option( 'profile_checkbox' )!='checked' || ! isset($picture) ) {
     $disabled = 'disabled';
+		$cant_remove = true;
   }
   else {
     $disabled = '';
-  }
-
-  $cant_remove = false;
-
-  if ( !isset( $picture ) ) {
-    $cant_remove = true;
-    $picture = get_template_directory()  . '/img/profile.jpg';
   }
 
   if ( $cant_remove ) {
@@ -690,13 +686,26 @@ function portfolioTheme_content_blog_bg_2() {
 
   $options = get_option( 'content_blog_bg_2' );
 
-  if ( !isset( $options ) ) {
-    $options = get_template_directory()  . '/img/testimonials.jpg';
+	$cant_remove = false;
+	$disabled = '';
+  if ( !isset( $options ) || '' == $options ) {
+   $cant_remove = true;
+	 $disabled = 'disabled';
   }
 
-  echo '<input type="button" class="button button-secondary"  id="upload_content_blog_bg" value="Upload Blog Background"/><input type="hidden" id="content_blog_bg_2" name="content_blog_bg_2" value="' . esc_attr( $options ) . '" />
-  <input type="button" class="button button-secondary" value="reset to default" id="remove-bloggy-bg" />
-  <div id="upload_content_blog_bg_placeholder" style="width:300px;height:300px;background-position:center;margin:50px;background-size:cover;background-image:url( ' . esc_attr( $options ) . ' )"></div>';
+	if ( $cant_remove	):
+
+	  echo '<input type="button" class="button button-secondary"  id="upload_content_blog_bg" value="Upload Blog Background"/><input type="hidden" id="content_blog_bg_2" name="content_blog_bg_2" value="" />
+	  <input type="button" class="button button-secondary" value="delete image" id="remove-bloggy-bg" ' . esc_attr( $disabled ) . '/>
+	  <div id="upload_content_blog_bg_placeholder" style="width:300px;height:300px;background-position:center;margin:50px;background-size:cover;background-image:url()"></div>';
+
+	else:
+
+		echo '<input type="button" class="button button-secondary"  id="upload_content_blog_bg" value="Upload Blog Background"/><input type="hidden" id="content_blog_bg_2" name="content_blog_bg_2" value="' . esc_attr( $options ) . '" />
+	  <input type="button" class="button button-secondary" value="delete image" id="remove-bloggy-bg" ' . esc_attr( $disabled ) . '/>
+	  <div id="upload_content_blog_bg_placeholder" style="width:300px;height:300px;background-position:center;margin:50px;background-size:cover;background-image:url(' . esc_attr( $options ) . ')"></div>';
+
+	endif;
 
 }
 
@@ -741,13 +750,26 @@ function portfolioTheme_content_testimonials_bg() {
 
   $options = get_option( 'content_testimonials_bg' );
 
-  if ( !isset( $options ) ) {
-    $options = get_template_directory()  . '/img/testimonials.jpg';
+	$cant_remove = false;
+	$disabled = '';
+  if ( !isset( $options ) || '' == $options ) {
+   $cant_remove = true;
+	 $disabled = 'disabled';
   }
 
-  echo '<input type="button" class="button button-secondary"  id="upload_testimonials_bg" value="Upload Testimonials Background"/><input type="hidden" id="content_testimonials_bg" name="content_testimonials_bg" value="' . esc_attr( $options ) . '" />
-  <input type="button" class="button button-secondary" value="reset to default" id="remove-blog-bg" />
-  <div id="upload_testimonials_bg_placeholder" style="width:300px;height:300px;background-position:center;margin:50px;background-size:cover;background-image:url( ' . esc_attr( $options ) . ' )"></div>';
+	if ( $cant_remove	):
+
+	  echo '<input type="button" class="button button-secondary"  id="upload_testimonials_bg" value="Upload Testimonials Background"/><input type="hidden" id="content_testimonials_bg" name="content_testimonials_bg" value="" />
+	  <input type="button" class="button button-secondary" value="delete image" id="remove-blog-bg" ' . esc_attr( $disabled ) . ' />
+	  <div id="upload_testimonials_bg_placeholder" style="width:300px;height:300px;background-position:center;margin:50px;background-size:cover;background-image:url( )"></div>';
+
+	else:
+
+		echo '<input type="button" class="button button-secondary"  id="upload_testimonials_bg" value="Upload Testimonials Background"/><input type="hidden" id="content_testimonials_bg" name="content_testimonials_bg" value="' . esc_attr( $options ) . '" />
+	  <input type="button" class="button button-secondary" value="delete image" id="remove-blog-bg" />
+	  <div id="upload_testimonials_bg_placeholder" style="width:300px;height:300px;background-position:center;margin:50px;background-size:cover;background-image:url( ' . esc_attr( $options ) . ' )"></div>';
+
+	endif;
 
 }
 
@@ -762,13 +784,26 @@ function portfolioTheme_content_main_bg() {
 
   $options = get_option( 'content_main_page_bg' );
 
-  if ( !isset( $options ) ) {
-    $options = get_template_directory()  . '/img/main.jpg';
+	$cant_remove = false;
+	$disabled = '';
+  if ( !isset( $options ) || '' == $options ) {
+   $cant_remove = true;
+	 $disabled = 'disabled';
   }
 
-  echo  '<input type="button" class="button button-secondary"  id="upload_main_bg" value="Upload Main background image"/><input type="hidden" id="content_main_page_bg" name="content_main_page_bg" value="' . esc_attr( $options ) . '" />
-  <input type="button" class="button button-secondary" value="reset to default" id="remove-main-bg" />
-  <div id="upload_main_bg_placeholder" style="width:300px;height:300px;background-position:center;margin:50px;background-size:cover;background-image:url( ' . esc_attr( $options ) . ' )"></div>';
+	if ( $cant_remove	):
+
+		echo  '<input type="button" class="button button-secondary"  id="upload_main_bg" value="Upload Main background image"/><input type="hidden" id="content_main_page_bg" name="content_main_page_bg" value="" />
+	  <input type="button" class="button button-secondary" value="delete image" id="remove-main-bg" ' . esc_attr( $disabled ) . ' />
+	  <div id="upload_main_bg_placeholder" style="width:300px;height:300px;background-position:center;margin:50px;background-size:cover;background-image:url()"></div>';
+
+	else:
+
+		echo  '<input type="button" class="button button-secondary"  id="upload_main_bg" value="Upload Main background image"/><input type="hidden" id="content_main_page_bg" name="content_main_page_bg" value="' . esc_attr( $options ) . '" />
+	  <input type="button" class="button button-secondary" value="delete image" id="remove-main-bg" />
+	  <div id="upload_main_bg_placeholder" style="width:300px;height:300px;background-position:center;margin:50px;background-size:cover;background-image:url( ' . esc_attr( $options ) . ' )"></div>';
+
+	endif;
 
 }
 

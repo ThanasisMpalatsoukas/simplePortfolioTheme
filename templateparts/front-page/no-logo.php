@@ -82,10 +82,24 @@
 	<div class="front-page-container">
 		<div class="front-page container-fluid">
 			<div class="row">
-				<div class="container-fluid header-photo background-image" style="background-image:url('<?php getImage( 'content_main_page_bg' , 'main.jpg' ); ?>');">
+				<?php
+				$main_bg = get_option( 'content_main_page_bg' );
+				if( isset( $main_bg ) && '' != $main_bg	):
+				?>
+				<div class="container-fluid header-photo background-image" style="background-image:url('<?php getImage( 'content_main_page_bg' , '' ); ?>');">
 					<div style="width:100%;">
 						<h1 id="first-name"><?php echo esc_html( get_option( 'first_name' ) ); ?></h1>
 					</div>
+					<?php
+					else:
+					?>
+					<div class="no-main-bg container-fluid header-photo background-image" style="background-color:#2c3e50; ">
+						<div style="width:100%;">
+							<h1 id="first-name"><?php echo esc_html( get_option( 'first_name' ) ); ?></h1>
+						</div>
+					<?php
+					endif;
+					?>
 					<div class="col-lg-10 info-on-image">
 						<div class="phone-container">
 							<p><span>phone:</span></p>

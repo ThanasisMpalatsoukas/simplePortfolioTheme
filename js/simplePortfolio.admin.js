@@ -68,7 +68,7 @@ jQuery(document).ready(function($){
     e.preventDefault();
     var answer = confirm("Are you sure you want to remove your profile picture");
     if( answer  ==  true ){
-      $('#content_testimonials_bg').val('');
+      $('#content_main_page_bg').val('');
       $('.portfolio_general_form_content').submit();
     }
     return;
