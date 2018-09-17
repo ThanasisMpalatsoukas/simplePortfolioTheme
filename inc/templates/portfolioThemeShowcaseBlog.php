@@ -8,7 +8,7 @@
  **/
 
 ?>
-<div class="col-lg-4 col-md-12 col-sm-12 col-12">
+<div class="col-lg-4 col-md-12 col-sm-12 col-12 showUp" id="blogs">
   <a href="<?php the_permalink(); ?>">
   <div class="post">
     <div class="post-image background-image" style="background-image:url('<?php echo esc_attr( get_the_post_thumbnail_url() ); ?>')">

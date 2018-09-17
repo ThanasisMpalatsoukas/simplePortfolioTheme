@@ -31,7 +31,7 @@
       <div class="container-fluid" id="most-information-all">
         <div class="row">
 
-          <div class="col-lg-6 objectives">
+          <div class="col-lg-6 objectives showUp" id="text1">
 
             <h2 class="showup-information" id="objectives"><span><?php echo esc_html_e( 'OBJECTIVES'  , 'simplePortfolio' ); ?></span></h2>
 
@@ -39,7 +39,7 @@
 
           </div><!-- .col-lg-6 .objectives -->
 
-          <div class="col-lg-6 objectives">
+          <div class="col-lg-6 objectives showUp" id="text2">
 
             <h2 class="showup-information"><span><?php echo esc_html_e( 'ABOUT ME'  , 'simplePortfolio' ); ?></span></h2>
 
@@ -149,7 +149,7 @@
 
           <div class="container-fluid">
 
-            <h2 id="portfolio" ><?php echo esc_html_e( 'PORTFOLIO'  , 'simplePortfolio' ); ?></h2>
+            <h2 id="portfolio"><?php echo esc_html_e( 'PORTFOLIO'  , 'simplePortfolio' ); ?></h2>
 
 
               <div class="categories">
@@ -221,7 +221,7 @@
 						<?php
 						else :
 						?>
-						<div class="blog container-fluid background-image"  style="background-color:#3498db;">
+						<div class="blog container-fluid background-image" style="background-color:#3498db;">
 						<?php
 						endif;
 						?>
@@ -259,7 +259,7 @@
 			              </a>
 			            </div><!-- .col-lg-4 .col-md-12 .col-sm-12 .col-12 -->
 
-			          <?php endwhile; ?>
+			          <?php $i++; endwhile; ?>
 			        <?php else: ?>
 			          <h2><?php echo esc_html_e( ' PLEASE DEACITVATE THE BLOG SECTION OR INSERT POSTS TO IT '  , 'simplePortfolio' ); ?></h2>
 			      <?php endif; ?>

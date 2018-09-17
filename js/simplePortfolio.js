@@ -4,9 +4,9 @@
  * @package perfectPortfolio
  * @since 1.0.0
  */
-
-jQuery(document).ready(function($){
-
+var $ = jQuery.noConflict();
+$(document).ready(function($){
+	'use strict';
 
   var load = $('#loading').val();
 
@@ -97,684 +97,629 @@ jQuery(document).ready(function($){
     }
   }
 
-    $('.contact-me-form').hide();
-    $('.hidden-x').hide();
-
-    $('.hidden-x').insertAfter('.contact-me-form');
-
-    $.ajaxPrefilter(function( options, originalOptions, jqXHR ) { options.async = true; });
-
-    $('.profile-text').css({'margin-top':'-300px' , 'opacity' : '0'});
-
-    $('.profile-text').animate({
-      marginTop :'0px',
-      opacity : '1'
-    },1500);
-
-    $('.profile-picture-container').hide();
-    $('#first-name').hide();
-    $('.profile-picture-container').fadeIn(1500).fadeTo(2000);
-
-    var customText = $('#profile-hidden-text').val();
-
-    $('#first-name').fadeIn(1500);
-
-    $('.skillbar-progress').each(function(i,obj){
-      var percentage = $(obj).data('progress');
-      $(obj).css('width',percentage+'%');
-    });
-
-    if($('#profile-text-animation').val() == 1){
-      keyboardAnimation(customText , $('#profile-text-animation-timer').val() ,  '#profile-text-p');
-    }
-    else{
-      $('#profile-text-p').text(customText);
-    }
-
-    // Elements that trigger during scroll.
-    var mostInformation = '#objectives';
-
-    // Hide elements that will trigger.
-    $('.showup-information').hide();
-    $('.showup-information-p').hide();
-
-    $('.dots').css('width',60*$('#numberOfImages').val()+'px');
-
-
-    // ON action statements.
-    $('.contact-me-button').on('click',function(){
-      $('.contact-me-form').show(1200);
-      $('.contact-me-button').hide(1200);
-      $('.hidden-x').show(1200);
-      $('.contact-me').animate({
-        height:'1000px'
-      },1200);
-    });
-
-    $('a[href^="#"]').on('click',function (e) {
-        e.preventDefault();
-
-        var target = this.hash,
-        $target = $(target);
-
-        if(typeof($target.offset())!== 'undefined' ){
-          $('html, body').stop().animate({
-              'scrollTop': $target.offset().top
-          }, 900, 'swing', function () {
-              window.location.hash = target;
-          });
-        }
-
-  });
-
-		$('.menu-icon-picture').on('click', () => {
-			$('.big-menu').css('display','block');
-			$('.big-menu').animate({
-
-				opacity:1
-			},1600);
-		});
-
-		$('.big-menu-button').on('click' , () =>{
-			$('.big-menu').animate({
-
-				opacity:0
-			},1600);
-			setTimeout(() =>{
-				$('.big-menu').css('display','none');
-			},1600);
-		});
-
-		$('.exit-button').on('click', () =>{
-			$('.big-menu').animate({
-
-				opacity:0
-			},1600);
-			setTimeout(() =>{
-				$('.big-menu').css('display','none');
-			},1600);
-		});
-
-
-    $('.hidden-x').on('click',()=>{
-      $('.contact-me-form').hide(1200);
-      $('.contact-me-button').show(1200);
-      $('.hidden-x').hide(1200);
-      $('.contact-me').animate({
-        height:'350px'
-      },1200);
-    });
-
-    var scrollTop     = $(window).scrollTop(),
-      elementOffset = $(mostInformation).offset().top,
-      distanceMostInformation  = (elementOffset - scrollTop);
-
-    $(window).on('scroll',function(){
-      checkIfScrolledEnough(distanceMostInformation);
-    });
-
-    checkIfScrolledEnough(distanceMostInformation);
-
-    $('.post').hover(function(){
-
-      var height = '20vh';
-
-      if($( window ).width() < '1000'){
-        height = '180px';
-      }
-
-      $('.colored-icon').css('background-color',randomRgba());
-      $(this).find('.colored-icon').animate({
-        opacity : 0.8,
-        height : height
-      },300);
-    },function(){
-      $(this).find('.colored-icon').animate({
-        opacity : 0,
-        height : '0vh'
-      },300);
-    });
-
-    $('.categories-single').on('click',function(){
-      var which = 0;
-      $('.categories-single').each(function(i,obj){
-        if($(obj).hasClass('chosen')){
-          which = i;
-          $(obj).animate({
-            borderRight : '0px solid white',
-            fontSize : '0.8em',
-            fontWeight : '400',
-            marginBottom : '0px',
-            marginTop : '0px'
-          },200,function(){
-            $(obj).removeClass('chosen');
-          });
-        }
-      });
-
-      var marginTop;
-
-      if(which == 0){
-        marginTop = '0px';
-      }
-      else{
-        marginTop = '25px';
-      }
-
-      $(this).animate({
-        borderRight : '2px solid #90c6db',
-        fontSize : '1.2em',
-        fontWeight : '700',
-        marginBottom : '25px',
-        marginTop : marginTop
-      },200,function(){
-        $(this).addClass('chosen');
-      });
-    });
-
-    $('body').on('mouseenter','.portfolio-container-single',
-      function(){
-        $(this).find('div').each(function(i,obj){
-          if($(obj).hasClass('inner-icon')){
-            $(obj).fadeIn(400);
-          }
-          if($(obj).hasClass('job-title')){
-            $(obj).find('p').animate({
-              'letter-spacing':'1px',
-              'font-size':'1em',
-              'opacity' : '1'
-            },400);
-          }
-        });
-      });
-
-    $('body').on('click tap','.portfolio-container-single',function(){
-      var href = $(this).find('input').val();
-
-      var category;
-        $('.categories-single').each(function(i,obj){
-          if($(obj).hasClass('chosen')){
-            category = $(obj).text();
-          }
-        });
-        window.location = href+'&category='+category;
-    });
-
-    $('body').on('mouseleave','.portfolio-container-single',
-      function(){
-        $(this).find('div').each(function(i,obj){
-          if($(obj).hasClass('inner-icon')){
-            $(obj).fadeOut(400);
-          }
-          if($(obj).hasClass('job-title')){
-            $(obj).find('p').animate({
-              'letter-spacing':'0px',
-              'font-size':'0.9em',
-              'opacity' : '0.6'
-            },400);
-          }
-        });
-      }
-    );
-
-
-
-
-    // TESTIMONIALS SLIDER.
-    // CUSTOM FUNCTION AREA.
-    for(i = 2;i<= $('#numberOfImages').val();i++){
-      $('#testimonial'+i).css('display','none');
-      $('#testimonial'+i).css('opacity','0');
-      $('#testimonial'+i+'pic').css('display','none');
-      $('#testimonial'+i+'pic').css('opacity','0');
-    }
-
-    var currentNumber = 1;
-
-    $('.right-triangle').on('click',function(){
-        nextImage( currentNumber , $('#numberOfImages').val() , 700 );
-        currentNumber++;
-        if( currentNumber > $('#numberOfImages').val() ){
-            currentNumber = 1;
-        }
-    });
-
-    $('.left-triangle').on('click',function(){
-        lastImage( currentNumber , $('#numberOfImages').val() , 700 );
-        currentNumber--;
-        if( currentNumber == 0 ){
-            currentNumber = $('#numberOfImages').val();
-        }
-    });
-
-    $('.dot-inside').on('click tap',function(){
-      currentNumber = currentDot(currentNumber , $('#numberOfImages').val() , 700 , this );
-    });
-
-    function currentDot( currentNumber  , generalAmount  , timing, element ){
-
-      $('#testimonial'+currentNumber).animate({
-        'opacity':'0'
-      },timing,function(){
-        $('#testimonial'+currentNumber).css('display','none');
-      });
-
-      $('#dot'+currentNumber).animate({
-        height:'10px',
-        width:'10px'
-      },timing);
-
-      $('#testimonial'+currentNumber+'pic').animate({
-        opacity : 0
-      },timing,function(){
-        $('#testimonial'+currentNumber+'pic').css('display','none');
-      });
-
-      var string = element.id;
-      var lastLetter = string[string.length -1];
-
-      $('#dot'+lastLetter).animate({
-        height:'22px',
-        width:'22px'
-      },timing);
-
-      setTimeout(function(){
-          $('#testimonial'+lastLetter+'pic').css('display','block');
-          $('#testimonial'+lastLetter).css('display','block');
-          $('#testimonial'+lastLetter).animate({
-            opacity : '1'
-          },timing);
-          $('#testimonial'+lastLetter+'pic').animate({
-            opacity : '1'
-          },timing);
-      },timing-6);
-
-      return parseInt(lastLetter);
-
-    }
-
-    function lastImage(currentNumber  , generalAmount  , timing  ){
-
-      /*
-        currentNumber INT: current active image
-        generalAmount INT: amount of images
-        timing INT: amount of time to change 500<x<1000
-      */
-
-      $('#testimonial'+currentNumber).animate({
-        'opacity':'0'
-      },timing,function(){
-        $('#testimonial'+currentNumber).css('display','none');
-      });
-
-      $('#dot'+currentNumber).animate({
-        height:'10px',
-        width:'10px'
-      },timing);
-
-      $('#testimonial'+currentNumber+'pic').animate({
-        opacity : 0
-      },timing,function(){
-        $('#testimonial'+currentNumber+'pic').css('display','none');
-      });
-
-      if( currentNumber == 1 ){
-
-        $('#dot'+generalAmount).animate({
-          height:'22px',
-          width:'22px'
-        },timing);
-
-        setTimeout(function(){
-            $('#testimonial'+generalAmount+'pic').css('display','block');
-            $('#testimonial'+generalAmount).css('display','block');
-            $('#testimonial'+generalAmount).animate({
-              opacity : '1'
-            },timing);
-            $('#testimonial'+generalAmount+'pic').animate({
-              opacity : '1'
-            },timing);
-        },timing-6);
-
-      }
-      else{
-
-        $('#dot'+(currentNumber-1)).animate({
-          height:'22px',
-          width:'22px'
-        },timing);
-
-        setTimeout(function(){
-            $('#testimonial'+(currentNumber-1)+'pic').css('display','block');
-            $('#testimonial'+(currentNumber-1)).css('display','block');
-            $('#testimonial'+(currentNumber-1)).animate({
-              opacity : '1'
-            },timing);
-
-            $('#testimonial'+(currentNumber-1)+'pic').animate({
-              opacity : '1'
-            },timing);
-        },timing-6);
-
-      }
-    }
-
-    function nextImage(currentNumber , generalAmount , timing ){
-
-      /*
-        currentNumber INT: current active image
-        generalAmount INT: amount of images
-        timing INT: amount of time to change 500<x<1000
-      */
-
-      $('#testimonial'+currentNumber).animate({
-        'opacity':'0'
-      },timing,function(){
-        $('#testimonial'+currentNumber).css('display','none');
-      });
-
-      $('#dot'+currentNumber).animate({
-        height:'10px',
-        width:'10px'
-      },timing);
-
-      $('#testimonial'+currentNumber+'pic').animate({
-        opacity : 0
-      },timing,function(){
-        $('#testimonial'+currentNumber+'pic').css('display','none');
-      });
-
-      if( currentNumber == generalAmount ){
-
-        $('#dot1').animate({
-          height:'22px',
-          width:'22px'
-        },timing);
-
-        setTimeout(function(){
-            $('#testimonial'+1+'pic').css('display','block');
-            $('#testimonial'+1).css('display','block');
-            $('#testimonial'+1).animate({
-              opacity : '1'
-            },timing);
-            $('#testimonial'+1+'pic').animate({
-              opacity : '1'
-            },timing);
-        },timing-6);
-
-      }
-      else{
-
-        $('#dot'+(currentNumber+1)).animate({
-          height:'22px',
-          width:'22px'
-        },timing);
-
-        setTimeout(function(){
-            $('#testimonial'+(currentNumber+1)+'pic').css('display','block');
-            $('#testimonial'+(currentNumber+1)).css('display','block');
-            $('#testimonial'+(currentNumber+1)).animate({
-              opacity : '1'
-            },timing);
-
-            $('#testimonial'+(currentNumber+1)+'pic').animate({
-              opacity : '1'
-            },timing);
-        },timing-6);
-
-      }
-
-    }
-
-    /*
-    ----------------------------------
-      ANIMATION FUNCTIONS
-    ----------------------------------
-    */
-
-
-
-
-    function keyboardAnimation( text , seconds = 'random' , targetElement ){
-
-      var currentLetter = 0;
-      var wholeText = '';
-
-
-      var showText = setInterval(function(){
-
-        if(text[currentLetter] == ' '){
-          wholeText+=' ';
-          currentLetter++;
-        }
-        wholeText+=text[currentLetter];
-        $(targetElement).text(wholeText);
-        currentLetter++;
-
-        if(text.length == currentLetter){
-          clearInterval(showText);
-        }
-
-      },seconds,currentLetter,wholeText);
-
-    }
-
-    /*
-    ----------------------------------
-      MISC
-    ----------------------------------
-    */
-
-    function randomRgba(){
-      var n1 = Math.floor(Math.random() * 255),
-          n2 = Math.floor(Math.random() * 255),
-          n3 = Math.floor(Math.random() * 255)
-
-      return 'rgba('+n1+','+n2+','+n3+',1)';
-    }
-
-
-    function checkIfScrolledEnough(distanceMostInformation){
-      currentScroll = $(window).scrollTop();
-
-      if(currentScroll >= distanceMostInformation+100){
-        $('.showup-information').fadeIn(1800);
-        $('.showup-information-p').fadeIn(2300);
-      }
-    }
-
-
-    /*
-    ----------------------------------
-      AJAX REQUEST
-    ----------------------------------
-    */
-
-  $(document).on('click','.next-page',function(){
-
-    var that = $(this);
-    var page = $(this).data('page');
-
-    var maxPages = $(this).data('max');
-    var category = $('.chosen').data('id');
-    page++;
-
-    console.log(page);
-
-
-    $('.portfolio-container').animate({
-      opacity : 0
-    },500);
-
-    setTimeout(function(){
-
-
-      if(page >= maxPages){
-        $('.next-page').css('display','none');
-      }
-
-      $.ajax({
-        type : 'POST',
-        url : urlforajax.ajax_url,
-        async: true,
-        data :{
-          action    : 'portfolioThemePagination',
-          page      : page,
-          category  : category,
-          max       : maxPages
-        },
-        dataType : 'text',
-        success : function(data){
-
-          $('.portfolio-container').html(data.slice(0, -1));
-            $('.portfolio-container').animate({
-              opacity : 1
-            },500);
-
-        }
-      });
-
-    },500);
-  });
-
-    $(document).on('click','.last-page',function(){
-
-      var that = $(this);
-      var page = $(this).data('page');
-
-      var maxPages = $(this).data('max');
-      var category = $('.chosen').data('id');
-      page--;
-      $('.portfolio-container').animate({
-        opacity : 0
-      },500);
-
-      console.log(page);
-
-
-      if(page == 0){
-        $('.last-page').css('display','none');
-      }
-
-      $('.next-page').css('display','block');
-
-      setTimeout(function(){
-
-        $.ajax({
-          type : 'POST',
-          async: true,
-          url : urlforajax.ajax_url,
-          data :{
-            action    : 'portfolioThemePagination',
-            page      : page,
-            category  : category,
-            max       : maxPages
-          },
-          dataType : 'text',
-          success : function(data){
-
-            $('.portfolio-container').html(data.slice(0, -1));
-            $('.portfolio-container').animate({
-              opacity : 1
-            },500);
-
-          }
-        });
-
-      },500);
-    });
-
-      $(document).on('click','.categories-single',function(){
-
-        var that = $(this);
-        var category = $(this).data('id');
-        var page = 1;
-
-        var maxPages = $(this).data('max');
-
-        $('.portfolio-container').animate({
-          opacity : 0
-        },500);
-
-        console.log(page);
-
-        setTimeout(function(){
-
-          $.ajax({
-            type : 'POST',
-            url : urlforajax.ajax_url,
-            async: true,
-            data :{
-              action    : 'portfolioThemePaginationByCategory',
-              category  : category,
-              page      : page,
-              max       : maxPages
-            },
-            dataType : 'text',
-            success : function(data){
-
-              $('.portfolio-container').html(data.slice(0, -1));
-              $('.portfolio-container').animate({
-                opacity : 1
-              },500);
-
-            }
-          });
-
-        },500);
-
-
-      });
-
-		$(document).on('click' , '.submit-email' , function(e){
-
-			e.preventDefault();
-
-			var name = $('#form_name').val();
-			var email = $('#form_email').val();
-			var message = $('#form_message').val();
-
-			if(name == ''){
-				$('.sadMessage').html('You need to enter your full name');
-				$('.sadMessage').css('display' , 'block');
-				return;
-			}
-			else if(email == ''){
-				$('.sadMessage').html('You need to enter your email');
-				$('.sadMessage').css('display' , 'block');
-				return;
-			}
-			else if( message.length < 20	){
-				$('.sadMessage').html('The message needs to have at least 20 characters');
-				$('.sadMessage').css('display' , 'block');
-				return;
-			}
-
-			$.ajax({
-				type : 'POST',
-				url : urlforajax.ajax_url,
-				async: true,
-				data :{
-					action    : 'portfolioThemeSendEmail',
-					name : name,
-					email : email,
-					message : message
-				},
-				dataType : 'text',
-				success : function(data){
-					$('#form_name').val('');
-					$('#form_email').val('');
-					$('#form_message').val('');
-					console.log(data);
-					$('.sadMessage').css('display' , 'none');
-					$('.HappyMessage').css('display','block');
-				},
-				error : function(){
-					$('.sadMessage').css('display' , 'block');
-				}
-			});
-
-		});
+$(document).on('click' , '.submit-email' , function(e){
+
+	e.preventDefault();
+
+	var name = $('#form_name').val();
+	var email = $('#form_email').val();
+	var message = $('#form_message').val();
+
+	if(name == ''){
+		$('.sadMessage').html('You need to enter your full name');
+		$('.sadMessage').css('display' , 'block');
+		return;
+	}
+	else if(email == ''){
+		$('.sadMessage').html('You need to enter your email');
+		$('.sadMessage').css('display' , 'block');
+		return;
+	}
+	else if( message.length < 20	){
+		$('.sadMessage').html('The message needs to have at least 20 characters');
+		$('.sadMessage').css('display' , 'block');
+		return;
+	}
+
+	$.ajax({
+		type : 'POST',
+		url : urlforajax.ajax_url,
+		async: true,
+		data :{
+			action    : 'portfolioThemeSendEmail',
+			name : name,
+			email : email,
+			message : message
+		},
+		dataType : 'text',
+		success : function(data){
+			$('#form_name').val('');
+			$('#form_email').val('');
+			$('#form_message').val('');
+			console.log(data);
+			$('.sadMessage').css('display' , 'none');
+			$('.HappyMessage').css('display','block');
+		},
+		error : function(){
+			$('.sadMessage').css('display' , 'block');
+		}
+	});
+
+});
 
 
 });
+
+$.ajaxPrefilter(function( options, originalOptions, jqXHR ) { options.async = true; });
+
+
+$('a[href^="#"]').on('click',function (e) {
+	e.preventDefault();
+
+	var target = this.hash,
+	$target = $(target);
+
+	if(typeof($target.offset())!== 'undefined' ){
+		$('html, body').stop().animate({
+				'scrollTop': $target.offset().top
+		}, 900, 'swing', function () {
+				window.location.hash = target;
+		});
+	}
+});
+
+
+/*
+* Modules
+*/
+
+var themeInit = (function(){
+
+	$('.profile-picture-container').hide();
+	$('#first-name').hide();
+	$('.profile-picture-container').fadeIn(1500).fadeTo(2000);
+	$('#first-name').fadeIn(1500);
+	$('.skillbar-progress').each(function(i,obj){
+		var percentage = $(obj).data('progress');
+		$(obj).css('width',percentage+'%');
+	});
+
+	$('.dots').css('width',60*$('#numberOfImages').val()+'px');
+
+})();
+
+var contactFormAnimation = (function(){
+	//cacheDom
+	$contactButton = $('.contact-me-button');
+	$contactmeForm = $('.contact-me-form');
+	$hiddenX = $('.hidden-x');
+	$contactMe = $('.contect-me');
+
+  //events
+	$contactButton.on('click',showForm);
+	$hiddenX.on('click',hideForm);
+
+	//init
+	$contactmeForm.hide();
+	$hiddenX.hide();
+	$hiddenX.insertAfter('.contact-me-form');
+
+	function showForm(){
+		$contactmeForm.show(1200);
+		$contactButton.hide(1200);
+		$hiddenX.show(1200);
+		$('.contact-me').animate({
+			height:'1000px'
+		},1200);
+	}
+
+	function hideForm() {
+		$contactmeForm.hide(1200);
+		$contactButton.show(1200);
+		$hiddenX.hide(1200);
+		$('.contact-me').animate({
+			height:'350px'
+		},1200);
+	}
+})();
+
+var bigMenuButton = (function(){
+
+	//cacheDom
+	var $bigMenu = $('.big-menu');
+	var $menuIcon = $('.menu-icon-picture');
+	var $bigMenuButton = $('.big-menu-button');
+	var $exitButton = $('.exit-button');
+
+	//events
+	$menuIcon.on('click', showMenu);
+	$bigMenuButton.on('click', hideMenu);
+	$exitButton.on('click',hideMenu);
+
+	//main
+	function showMenu(){
+		$bigMenu.css('display','block');
+		$bigMenu.animate({
+				opacity:1
+		},1600);
+	}
+
+	function hideMenu() {
+		$bigMenu.animate({
+				opacity:0
+		},1600);
+		setTimeout( () =>{
+			$bigMenu.css('display','none');
+		});
+	}
+
+})();
+
+var categoriesSingleAnimation = (function(){
+
+	//cacheDom
+	var $categories = $('.categories-single');
+	var $chosen = $('.chosen');
+	//events
+	$categories.on('click' , animateChosen);
+
+	//main
+	function animateChosen() {
+		$chosen = $('.chosen');
+		hideTheChosen($chosen);
+		showTheChosen(this);
+	}
+
+	function hideTheChosen($chosen){
+		//console.log($chosen);
+		$chosen.animate({
+			borderRight : '0px solid white',
+			fontSize : '0.8em',
+			fontWeight : '400',
+			marginBottom : '0px',
+			marginTop : '0px'
+		},200,function(){
+			$chosen.removeClass('chosen');
+		});
+	}
+
+	function showTheChosen(that){
+		$(that).animate({
+			fontSize : '1.2em',
+			fontWeight : '700',
+			marginBottom : '25px',
+			marginTop : '25px'
+		},200,function(){
+			$(that).addClass('chosen');
+		});
+	}
+
+})();
+
+var portfolioSingleHover = (function(){
+	//cachedDom
+	var $singlePortfolio = $('.portfolio-container-single');
+	var $categories = $('.categories-single');
+	var $body = $('body');
+
+	//events
+	$body.on('mouseenter' , '.portfolio-container-single' , animateInnerIcon);
+	$body.on('mouseleave', '.portfolio-container-single' , hideInnerIcon);
+	$body.on('click tap', '.portfolio-container-single' , enterPost);
+
+	function animateInnerIcon() {
+		$(this.querySelector('.inner-icon')).fadeIn(400);
+		$(this.querySelector('.job-title p')).animate({'letter-spacing':'1px','font-size':'1em','opacity' : '1'},400);
+	}
+
+	function hideInnerIcon() {
+		$(this.querySelector('.inner-icon')).fadeOut(400);
+		$(this.querySelector('.job-title p')).animate({'letter-spacing':'0px','font-size':'0.9em','opacity' : '0.6' },400);
+	}
+
+	function enterPost(){
+		 var href = this.querySelector('input').value;
+			window.location = href+'&category='+$('.chosen').text();;
+	}
+
+})();
+
+var ajaxReq = (function(){
+
+	//cache dom
+	var $doc = $(document);
+	var $page = $('.next-page');
+	var $currentPage = $page.data('page');
+	var $maxPages = $page.data('max');
+	var $chosen = $('.chosen');
+	var $category = $chosen.data('id');
+	var $portfolioCon = 	$('.portfolio-container');
+
+	//events
+	$doc.on('click','.next-page',nextPage);
+	$doc.on('click','.last-page',lastPage);
+	$doc.on('click','.categories-single',categoryPage);
+
+	function refreshData(){
+		 $category = $('.chosen').data('id');
+		 //$currentPage = $page.data('page');
+		 console.log($category);
+	}
+
+	function nextPage(){
+		$currentPage++;
+		hideContainer();
+		setTimeout(function(){
+			refreshData();
+			if($currentPage >= $maxPages){
+				$page.css('display','none');
+			}
+			sendData('portfolioThemePagination');
+		},500);
+	}
+
+	function lastPage(){
+		refreshData();
+		$currentPage--;
+		hideContainer();
+		if($currentPage == 0){
+			$('.last-page').css('display','none');
+		}
+
+		$('.next-page').css('display','block');
+
+		setTimeout(function(){
+			sendData('portfolioThemePagination');
+		},500);
+	}
+
+	function categoryPage(){
+
+		$currentPage = 1;
+		hideContainer();
+		setTimeout(function(){
+			refreshData();
+			sendData('portfolioThemePaginationByCategory');
+		},500);
+	}
+
+	function sendData(action){
+		console.log($category);
+		$.ajax({
+			type : 'POST',
+			url : urlforajax.ajax_url,
+			async: true,
+			data :{
+				action    : action,
+				page      : $currentPage,
+				category  : $category,
+				max       : $maxPages
+			},
+			dataType : 'text',
+			success : function(data){
+
+				$portfolioCon.html(data.slice(0, -1));
+					$portfolioCon.animate({
+						opacity : 1
+					},500);
+
+			}
+		});
+	}
+
+	function hideContainer(){
+		$portfolioCon.animate({
+			opacity : 0
+		},500);
+	}
+
+})();
+
+var checkIfScrolledEnough = {
+
+	elements : [],
+
+	init : function() {
+		this.cacheDom();
+		this.bindEl();
+		this.checkHeight();
+	},
+	cacheDom : function() {
+		this.$el = $('.showUp');
+		this.$window = $(window);
+		this.registerAllElements();
+	},
+	bindEl : function(){
+		this.$window.on('scroll' , this.checkHeight.bind(this));
+	},
+	registerAllElements : function(){
+		var that = this;
+		this.$el.each(function(i,obj){
+			var el = { };
+			el.id = $('#'+obj.id);
+			console.log(obj.offsetTop);
+			el.height = parseInt(obj.offsetTop)-700;
+			that.elements.push(el);
+			if(i > 0 && (that.elements[i-1].height == that.elements[i].height )){
+				that.elements[i].height += 1;
+			}
+		});
+		console.log(this.elements);
+		this.hideEl();
+	},
+	hideEl : function() {
+		for(var i = 0;i < this.elements.length; i++){
+			this.elements[i].id.hide();
+		}
+	},
+	checkHeight : function() {
+		var scroll = parseInt(this.$window.scrollTop() );
+		for(var i = 0; i<this.elements.length ;i++){
+			if(this.elements[i].height <= scroll ){
+				this.elements[i].id.fadeIn(2000);
+			}
+		}
+
+	}
+}
+
+checkIfScrolledEnough.init();
+
+var postHovering = {
+	init : function() {
+		$('.post').css('z-index','1000');
+		this.cacheDom();
+		this.bindEl();
+	},
+	cacheDom : function() {
+		this.$post = $('.post');
+		this.$width = $(window).width();
+		this.$colored = $('.colored-icon');
+	},
+	bindEl : function() {
+		var that = this;
+		this.$post.hover( this.mouseoverAnimation , this.mouseleaveAnimation.bind(this,event) );
+	},
+	mouseoverAnimation : function() {
+
+		//var height = this.checkWindowWidth();
+		$('.colored-icon').css('background-color', 'black' );
+		$(this).find('.colored-icon').animate({
+			opacity : 0.8,
+			height :'20vh'
+		},150);
+	},
+	mouseleaveAnimation : function(){
+		this.$colored.animate({
+			opacity : 0,
+			height : '0vh'
+		},150);
+	},
+	checkWindowWidth : function() {
+		if(this.$width < '1000'){
+			return '180px';
+		}
+		return '20vh';
+	}
+}
+
+postHovering.init();
+
+//Keyboard animation
+var keyboardAnimation = {
+
+	wholeText : '',
+	currentLetter : 0,
+	keepAdding : '',
+	that : this,
+
+	init : function(){
+		this.cacheDom();
+		this.tick();
+		this.$profileText.css({'margin-top':'-300px' , 'opacity' : '0'});
+		this.$profileText.animate({marginTop :'0px',opacity : '1'},1500);
+	},
+	cacheDom : function(){
+		this.customText = $('#profile-hidden-text').val();
+		this.$seconds = $('#profile-text-animation-timer').val();
+		this.$targetEl = $('#profile-text-p');
+		this.$profileText = $('.profile-text');
+	},
+	render : function(){
+		this.$targetEl.text(this.wholeText);
+	},
+	tick : function(){
+		this.keepAdding = setInterval( this.addLetter.bind(this) ,this.$seconds,this.currentLetter,this.wholeText,this.that);
+	},
+	addLetter : function(){
+		if(this.customText[ this.currentLetter ] == ' '){
+			this.wholeText+=' ';
+			this.currentLetter++;
+		}
+		this.wholeText+=this.customText[ this.currentLetter ];
+		this.render();
+		this.currentLetter++;
+		if(this.customText.length == this.currentLetter ){
+			clearInterval(this.keepAdding);
+		}
+	}
+}
+
+keyboardAnimation.init();
+
+var changeImage = {
+
+	testimonials : { },
+	testimonialPictures : { },
+	dot : { },
+	timing : 600,
+	lastImage : false,
+	nextImage : true ,
+	firstImage : true,
+	currentNumber : 1,
+	clickedDot : false,
+	dotCliked : '',
+
+	init : function(){
+		this.cacheDom();
+		this.events();
+		this.hideTheImages();
+	},
+	cacheDom : function(){
+		this.generalAmount = $('#numberOfImages').val();
+		this.$rightTriangle = $('.right-triangle');
+		this.$leftTriangle = $('.left-triangle');
+		this.$currentDot = $('.dot-inside');
+		for(var i = 1; i <= this.generalAmount; i++){
+			this.testimonials["$n"+i] = $('#testimonial'+i);
+			this.testimonialPictures["$n"+i] = $("#testimonial"+i+"pic");
+			this.dot["$n"+i] = $("#dot"+i);
+		}
+	},
+	hideTheImages : function(){
+		for(var i = 2;i<= this.generalAmount ;i++){
+			this.testimonials["$n"+i].css('display','none');
+			this.testimonials["$n"+i].css('opacity','0');
+			this.testimonialPictures["$n"+i].css('display','none');
+			this.testimonialPictures["$n"+i].css('opacity','0');
+		}
+	},
+	events : function(){
+		this.$rightTriangle.on('click',this.nextImageAnimation.bind(this));
+		this.$leftTriangle.on('click',this.lastImageAnimation.bind(this));
+		this.$currentDot.on('click tap',  this.clickedOnDot.bind(this,event) );
+	},
+	nextImageAnimation : function(){
+
+		var that = this;
+
+		this.clickedDot = false;
+		this.nextImage = true;
+
+		this.hideCurrentImage();
+
+		if( this.currentNumber == this.generalAmount	){
+			this.lastImage = true;
+
+			this.showNextImage();
+
+			setTimeout(function(){
+				that.currentNumber = 1;
+			},this.timing );
+		}
+		else{
+			this.lastImage = false;
+
+			this.showNextImage();
+
+			setTimeout(function(){
+				that.currentNumber++;
+			},this.timing + 100);
+		}
+	},
+	lastImageAnimation : function(){
+
+		var that = this;
+
+		this.clickedDot = false;
+		this.nextImage = false;
+
+		this.hideCurrentImage();
+
+		if( this.currentNumber == 1	){
+			this.firstImage = true;
+
+			this.showNextImage();
+
+			setTimeout(function(){
+				that.currentNumber = that.generalAmount;
+			},this.timing + 100 );
+		}
+		else{
+			this.firstImage = false;
+
+			this.showNextImage();
+
+			setTimeout(function(){
+				that.currentNumber--;
+			},this.timing +100 );
+		}
+	},
+	clickedOnDot : function(){
+
+		var that = this;
+
+		this.hideCurrentImage();
+
+		var string =  event.path[0].id;
+		this.dotCliked = parseInt(string[string.length -1]);
+		this.clickedDot = true;
+		this.nextImage = false;
+
+		this.showNextImage();
+
+		setTimeout(function(){
+			that.currentNumber = that.dotCliked;
+		},this.timing + 100);
+
+	},
+	hideCurrentImage : function(){
+		var that = this;
+		this.testimonials["$n"+this.currentNumber].animate({
+			'opacity':'0'
+		},this.timing , function(){
+			that.testimonials["$n"+that.currentNumber].css('display','none');
+		});
+
+		this.dot["$n"+this.currentNumber].animate({
+			height:'10px',
+			width:'10px'
+		},this.timing);
+
+	},
+	showNextImage : function(){
+
+		var that = this;
+
+		if(this.nextImage){
+			currentImage = "$n"+(this.currentNumber+1);
+
+			if( this.lastImage ){
+				var currentImage = "$n1";
+			}
+		}
+		else if(this.clickedDot){
+			var	currentImage = "$n"+this.dotCliked;
+		}
+		else{
+			var currentImage = "$n"+(this.currentNumber-1);
+
+			if( this.firstImage ){
+				var currentImage = "$n"+this.generalAmount;
+			}
+		}
+
+		this.dot[currentImage].animate({
+			height : '22px',
+			width : '22px'
+		},this.timing  );
+
+		setTimeout(function(){
+
+			that.testimonialPictures[currentImage].css('display','block');
+			that.testimonials[currentImage].css('display','block');
+
+			that.testimonials[currentImage].animate({
+				opacity : '1'
+			},that.timing );
+
+			that.testimonialPictures[currentImage].animate({
+				opacity : '1'
+			},that.timing );
+
+		},this.timing - 1);
+
+	}
+}
+
+changeImage.init();

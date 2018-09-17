@@ -93,8 +93,13 @@ $loop = new WP_Query($args); $current = 1;
 
  endwhile;
  endif;
-
- set_query_var( 'max',intval( $loop->found_posts/8 )+1 );
+if ( $loop->found_posts % 8 == 0){
+	$max = 0;
+}
+else{
+ $max = ( intval( $loop->found_posts / 8 ) ) + 1;
+}
+ set_query_var( 'max', $max  );
  set_query_var( 'page',$page );
  set_query_var( 'category',$category );
 

@@ -46,7 +46,7 @@
      <div class="col-lg-4">
        <?php
 
-       if($page < $max - 1 ) :
+       if($page <= $max - 1 && $max%8!=0) :
 
        ?>
        <div class="next-posts text-center">
